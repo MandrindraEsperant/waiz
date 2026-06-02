@@ -9,7 +9,7 @@ import { Footer } from "./components/waiz/Footer";
 
 export default function Acceuil() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-gradient-to-b from-emerald-50/50 via-white to-white">
       <Navbar />
       <Hero />
       <SearchBar />
