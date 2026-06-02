@@ -1,0 +1,34 @@
+{
+  "logo": {
+    "title": "Waiz",
+    "subtitle": "Fitaterana"
+  },
+  "dashboard": {
+    "name": "Tabilao",
+    "description": "Fijerena ankapobeny"
+  },
+  "rides": {
+    "name": "Kajy",
+    "description": "Fanaraha-maso ny kajy",
+    "list": "Lisitry",
+    "listDescription": "Hijery ny kajy rehetra",
+    "reservation": "Famandrihana",
+    "reservationDescription": "Fitantanana ny famandrihana"
+  },
+  "zones": {
+    "name": "Faritra",
+    "description": "Faritra fanompoana"
+  },
+  "calendar": {
+    "name": "Kalandrie",
+    "description": "Hetsika ho avy"
+  },
+  "clients": {
+    "name": "Fitantanana ny mpanjifa",
+    "description": "Lisitra sy fitantanana ny mpanjifa"
+  },
+  "parametre": {
+    "name": "Parametra",
+    "description": "Fandrindrana ny safidinao"
+  }
+}

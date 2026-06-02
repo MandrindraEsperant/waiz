@@ -1,0 +1,47 @@
+{
+  "generateur": {
+    "title": "Kalandrie",
+    "subtitle": "Zava-misy ho avy sy fitantarana ny fanamarihana",
+    "stats": {
+      "totalNotes": "Fanamarihana totaly",
+      "todayNotes": "Fanamariana androany",
+      "weekEvents": "Zava-misy herinandro"
+    },
+    "calendar": {
+      "title": "Kalandrie ny Zava-misy",
+      "today": "Androany",
+      "days": ["Alah", "Alats", "Tal", "Alar", "Alak", "Zom", "Asab"],
+      "months": [
+        "Janoary", "Febroary", "Martsa", "Aprily", "Mey", "Jona",
+        "Jolay", "Aogositra", "Septambra", "Oktobra", "Novambra", "Desambra"
+      ]
+    },
+    "notes": {
+      "title": "Fanamariana ho an'ny",
+      "addPlaceholder": "Ampio fanamarihana ho an'ity daty ity...",
+      "addButton": "Ampio fanamarihana",
+      "noNotes": "Tsy misy fanamarihana ho an'ity daty ity",
+      "firstNote": "Ampio ny fanamarihana voalohany etsy ambony",
+      "selectDate": "Safidio daty amin'ny kalandrie hanampiana fanamarihana",
+      "clickToStart": "Tsindrio andro iray amin'ny kalandrie hanombohana",
+      "notesCount": "fanamarihana",
+      "created": "Noforonina tamin'ny",
+      "modified": "Novana tamin'ny",
+      "save": "Tehirizina",
+      "cancel": "Afoana",
+      "edit": "Hanova",
+      "delete": "Hamafa"
+    },
+    "events": {
+      "upcoming": "Zava-misy ho avy amin'ity herinandro ity",
+      "today": "ANDROANY",
+      "tomorrow": "RAHAM-PITSO",
+      "days": "ANDRO",
+      "noEvents": "Tsy misy zava-misy ho avy"
+    },
+    "loading": "Fanodinana ny fanamarihana...",
+    "saved": "fanamarihana voatahiry",
+    "upcomingEvents": "zava-misy ho avy",
+    "clearAll": "Hamafa ny fanamarihana rehetra"
+  }
+}

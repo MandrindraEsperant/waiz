@@ -1,0 +1,47 @@
+{
+  "generateur": {
+    "title": "Calendrier",
+    "subtitle": "Événements à venir et gestion des notes",
+    "stats": {
+      "totalNotes": "Notes totales",
+      "todayNotes": "Notes aujourd'hui",
+      "weekEvents": "Événements cette semaine"
+    },
+    "calendar": {
+      "title": "Calendrier des Événements",
+      "today": "Aujourd'hui",
+      "days": ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"],
+      "months": [
+        "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+        "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+      ]
+    },
+    "notes": {
+      "title": "Notes pour",
+      "addPlaceholder": "Ajouter une note pour cette date...",
+      "addButton": "Ajouter la note",
+      "noNotes": "Aucune note pour cette date",
+      "firstNote": "Ajoutez votre première note ci-dessus",
+      "selectDate": "Sélectionnez une date dans le calendrier pour ajouter des notes",
+      "clickToStart": "Cliquez sur un jour du calendrier pour commencer",
+      "notesCount": "note(s)",
+      "created": "Créé le",
+      "modified": "Modifié le",
+      "save": "Sauvegarder",
+      "cancel": "Annuler",
+      "edit": "Modifier",
+      "delete": "Supprimer"
+    },
+    "events": {
+      "upcoming": "Événements à venir cette semaine",
+      "today": "AUJOURD'HUI",
+      "tomorrow": "DEMAIN",
+      "days": "JOURS",
+      "noEvents": "Aucun événement à venir"
+    },
+    "loading": "Chargement des notes...",
+    "saved": "note(s) sauvegardée(s)",
+    "upcomingEvents": "événement(s) à venir",
+    "clearAll": "Supprimer toutes les notes"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "header": {
+    "title": "Tableau de Bord VTC - Prédictions Intelligentes",
+    "subtitle": "Connectez-vous pour accéder à votre espace"
+  },
+  "form": {
+    "title": "CONNEXION",
+    "subtitle": "Accédez à votre compte VTC",
+    "emailLabel": "Email :",
+    "emailPlaceholder": "Entrez votre email",
+    "passwordLabel": "Mot de passe :",
+    "passwordPlaceholder": "Entrez votre mot de passe"
+  },
+  "buttons": {
+    "login": "Se connecter",
+    "loggingIn": "Connexion..."
+  },
+  "links": {
+    "forgotPassword": "Mot de passe oublié ?",
+    "register": "Pas encore de compte ? S'inscrire"
+  },
+  "footer": {
+    "copyright": "Plateforme VTC - Prédictions Intelligentes &copy; 2025"
+  },
+  "validation": {
+    "requiredFields": "Veuillez remplir tous les champs.",
+    "invalidEmail": "Veuillez entrer une adresse email valide.",
+    "passwordMinLength": "Le mot de passe doit contenir au moins 4 caractères."
+  },
+  "errors": {
+    "loginFailed": "Échec de la connexion",
+    "timeout": "La connexion a expiré. Veuillez réessayer.",
+    "serverError": "Erreur du serveur",
+    "networkError": "Impossible de se connecter au serveur. Vérifiez votre connexion.",
+    "unexpectedError": "Une erreur inattendue est survenue."
+  },
+  "forgotPassword": {
+    "message": "Fonctionnalité de récupération de mot de passe à implémenter"
+  }
+}

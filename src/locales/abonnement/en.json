@@ -1,0 +1,187 @@
+{
+  "subscription": {
+    "pageTitle": "Waiz Subscription",
+    "title": "Choose Your Subscription",
+    "subtitle": "Unlock all application features",
+    "freeTrial": "7-Day Free Trial",
+    "featuresTitle": "What's Included",
+    "choosePlan": "Choose This Plan",
+    "currentPlan": "Current Plan",
+    "month": "month",
+    "months": "months",
+    "year": "year",
+    "years": "years",
+    "save": "saved",
+    "popular": "Popular",
+    "duration": {
+      "1year": "1 year",
+      "2years": "2 years",
+      "1month": "1 month",
+      "3months": "3 months",
+      "6months": "6 months",
+      "12months": "12 months"
+    }
+  },
+  
+  "plans": {
+    "basic": {
+      "name": "Basic",
+      "price": "0",
+      "period": "Free",
+      "features": [
+        "10 rides/month limit",
+        "No ride saving available",
+        "Basic map",
+        "Standard notifications"
+      ]
+    },
+    
+    "pro": {
+      "name": "Pro",
+      "price": "10000",
+      "period": "per month",
+      "features": [
+        "Unlimited rides",
+        "Saving implemented",
+        "Real-time map",
+        "Advanced notifications",
+        "Detailed statistics",
+        "Integrated itinerary"
+      ]
+    },
+    
+    "premium": {
+      "name": "Premium",
+      "price": "100000",
+      "period": "per year",
+      "features": [
+        "Everything in Pro",
+        "Ride priority",
+        "Free training",
+        "Insurance included"
+      ]
+    }
+  },
+  
+  "features": {
+    "unlimited": "Unlimited Rides",
+    "support": "24/7 Support",
+    "map": "Real-time Map",
+    "stats": "Statistics",
+    "priority": "Priority",
+    "training": "Training",
+    "insurance": "Insurance",
+    "badge": "Premium Badge",
+    "commission": "Reduced Commission"
+  },
+  
+  "validation": {
+    "termsRequired": "You must accept the terms of use.",
+    "cardNumberInvalid": "Invalid card number (16 digits required)",
+    "cardExpiryInvalid": "Invalid expiry date (MM/YY required)",
+    "cardCVCInvalid": "Invalid CVC (3 digits required)",
+    "cardNameInvalid": "Cardholder name required (minimum 3 characters)",
+    "operatorRequired": "Operator required",
+    "phoneInvalid": "Invalid phone number"
+  },
+  
+  "configuration": {
+    "title": "Plan configuration",
+    "duration": "Duration",
+    "selectYears": "Choose years",
+    "selectMonths": "Choose months",
+    "period": "Period",
+    "start": "Start",
+    "end": "End",
+    "paymentDetails": "Payment details",
+    "price": "Price",
+    "annual": "annual",
+    "monthly": "monthly",
+    "durationLabel": "Duration",
+    "total": "Total"
+  },
+
+  "payment": {
+    "title": "Payment Method",
+    "cardNumber": "Card Number",
+    "cardExpiry": "Expiry Date",
+    "cardCVC": "CVC",
+    "cardholderName": "Cardholder Name",
+    "cardholderPlaceholder": "Name on card",
+    "payNow": "Pay Now",
+    "processing": "Processing...",
+    "backToDashboard": "Back to Dashboard",
+    "securePayment": "SSL Secure Payment",
+    "methods": {
+      "card": "Card",
+      "mobile": "Mobile Money"
+    },
+    "terms": "By subscribing, you agree to our Terms of Service and Privacy Policy.",
+    "annual": "annual",
+    "monthly": "monthly",
+    "operator": "Operator",
+    "selectOperator": "Select an operator",
+    "phoneNumber": "Phone Number",
+    "phonePlaceholder": "07 000 000 00",
+    "phoneHint": "Your mobile money number",
+    "conditions": "Terms of Service",
+    "and": "and",
+    "privacy": "Privacy Policy",
+    "selectedPlan": "Selected plan",
+    "duration": "Duration",
+    "period": "Period",
+    "to": "to",
+    "totalAmount": "Total Amount",
+    "pendingNotice": "Your payment is pending activation.",
+    "confirmation": "Please confirm your details before payment."
+  },
+
+  "loading": {
+    "plans": "Loading plans...",
+    "driverInfo": "Loading driver information..."
+  },
+
+  "pending": {
+    "waitingForActivation": "Your request has been received. Validation code: ",
+    "title": "Activation in progress",
+    "redirecting": "Redirecting to dashboard..."
+  },
+
+  "success": {
+    "title": "Payment successful!",
+    "message": "Your subscription is active. Redirecting to dashboard...",
+    "goToDashboard": "Go to dashboard"
+  },
+
+  "errors": {
+    "driverInfoMissing": "Driver information is missing.",
+    "authTokenMissing": "Authentication token is missing.",
+    "paymentError": "An error occurred during payment.",
+    "corsError": "Network or CORS error. Check the backend server settings.",
+    "title": "Payment error",
+    "close": "Close"
+  },
+
+  "driver": {
+    "defaultName": "Driver"
+  },
+
+  "dur": {
+    "duration": {
+      "1year": "1 year",
+      "2years": "2 years",
+      "3years": "3 years",
+ "1month": "1 month",
+      "3months": "3 months",
+      "6months": "6 months",
+      "12months": "12 months"
+    }
+  },
+
+  "form": {
+    "searchCountry": "Search country...",
+    "noResults": "No results",
+    "format": "Format",
+    "fullNumber": "Full number"
+  }
+}

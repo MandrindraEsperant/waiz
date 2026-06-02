@@ -1,0 +1,101 @@
+{
+  "header": {
+    "title": "Nouveau Client",
+    "back": "Retour",
+    "save": "Enregistrer le client",
+    "cancel": "Annuler",
+    "saving": "Enregistrement...",
+    "listTitle": "Liste des clients",
+    "newClient": "Nouveau Client",
+    "searchPlaceholder": "Rechercher un client..."
+  },
+  "form": {
+    "clientInfo": "Informations du Client",
+    "formDescription": "Remplissez les informations nécessaires pour ajouter un nouveau client",
+    "name": "Nom complet",
+    "namePlaceholder": "Ex: Jean Dupont",
+    "phone": "Téléphone",
+    "required": "*",
+    "charCount": "caractères",
+    "searchCountry": "Rechercher un pays...",
+    "noResults": "Aucun pays trouvé",
+    "fullNumber": "Numéro complet",
+    "format": "Format"
+  },
+  "validation": {
+    "nameRequired": "Le nom est obligatoire",
+    "nameMinLength": "Le nom doit contenir au moins 2 caractères",
+    "phoneRequired": "Le téléphone est obligatoire",
+    "phoneInvalid": "Numéro de téléphone invalide"
+  },
+  "help": {
+    "title": "💡 Informations importantes",
+    "points": [
+      "Tous les champs marqués d'un * sont obligatoires",
+      "Le nom doit contenir au moins 2 caractères",
+      "Sélectionnez le pays pour le format de téléphone approprié",
+      "Le numéro sera sauvegardé avec l'indicatif international",
+      "Utilisez la recherche pour trouver rapidement votre pays",
+      "L'ID client est généré automatiquement par le système"
+    ]
+  },
+  "messages": {
+    "success": "Client ajouté avec succès !",
+    "error": "Erreur lors de l'ajout du client",
+    "clientExists": "Un client avec ce nom existe déjà",
+    "serverError": "Erreur serveur. Veuillez réessayer plus tard.",
+    "connectionError": "Impossible de contacter le serveur. Vérifiez votre connexion.",
+    "configError": "Erreur de configuration",
+    "editSuccess": "Client modifié avec succès !",
+    "deleteSuccess": "Client supprimé avec succès !",
+    "editError": "Erreur lors de la modification du client",
+    "deleteError": "Erreur lors de la suppression du client",
+    "calling": "Appel en cours vers",
+    "noNumber": "Numéro de téléphone manquant",
+    "invalidNumber": "Numéro de téléphone invalide",
+    "callError": "Impossible de lancer l'appel",
+    "numberCopied": "Numéro copié dans le presse-papier",
+    "copyManual": "Veuillez copier ce numéro manuellement",
+    "callWith": "Appeler avec",
+    "chooseApp": "Choisissez une application",
+    "skype": "Skype",
+    "whatsapp": "WhatsApp",
+    "teams": "Microsoft Teams"
+  },
+  "table": {
+    "id": "ID",
+    "name": "Nom",
+    "phone": "Téléphone",
+    "actions": "Actions",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "total": "Total",
+    "clients": "clients",
+    "noData": "Aucun client trouvé",
+    "noSearchResults": "Aucun client ne correspond à votre recherche",
+    "createFirst": "Créer le premier client",
+    "showAll": "Afficher tous les clients"
+  },
+  "modals": {
+    "editTitle": "Modifier le Client",
+    "deleteTitle": "Confirmer la suppression",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer le client :",
+    "deleteWarning": "Cette action est irréversible !",
+    "confirmDelete": "Supprimer",
+    "deleting": "Suppression..."
+  },
+  "phoneErrors": {
+    "MG": "Le numéro malgache doit commencer par 32-38 et contenir 9 chiffres",
+    "FR": "Le numéro français doit contenir 9 chiffres",
+    "US": "Le numéro américain doit contenir 10 chiffres",
+    "GB": "Le numéro britannique doit contenir 10-11 chiffres",
+    "DE": "Le numéro allemand doit contenir 10-11 chiffres",
+    "CA": "Le numéro canadien doit contenir 10 chiffres",
+    "AU": "Le numéro australien doit contenir 9 chiffres",
+    "BR": "Le numéro brésilien doit contenir 10-11 chiffres",
+    "CN": "Le numéro chinois doit contenir 11 chiffres",
+    "IN": "Le numéro indien doit contenir 10 chiffres",
+    "JP": "Le numéro japonais doit contenir 10-11 chiffres",
+    "default": "Numéro de téléphone invalide (6-15 chiffres)"
+  }
+}

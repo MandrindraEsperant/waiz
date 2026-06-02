@@ -1,0 +1,186 @@
+{
+  "subscription": {
+    "pageTitle": "Abonnement Waiz",
+    "title": "Choisissez Votre Abonnement",
+    "subtitle": "Débloquez toutes les fonctionnalités de l'application",
+    "freeTrial": "Essai Gratuit de 7 Jours",
+    "featuresTitle": "Ce qui est inclus",
+    "choosePlan": "Choisir ce plan",
+    "currentPlan": "Plan actuel",
+    "month": "mois",
+    "months": "mois",
+    "year": "an",
+    "years": "ans",
+    "save": "économisé",
+    "popular": "Populaire",
+    "duration": {
+      "1year": "1 an",
+      "2years": "2 ans",
+      "1month": "1 mois",
+      "3months": "3 mois",
+      "6months": "6 mois",
+      "12months": "12 mois"
+    }
+  },
+  
+  "plans": {
+    "basic": {
+      "name": "Basique",
+      "price": "0",
+      "period": "Gratuit",
+      "features": [
+        "10 courses/mois maximum",
+        "Absence de sauvegarde des courses",
+        "Carte basique",
+        "Notifications standard"
+      ]
+    },
+    
+    "pro": {
+      "name": "Pro",
+      "price": "10000",
+      "period": "par mois",
+      "features": [
+        "Courses illimitées",
+        "Sauvegarde implementés",
+        "Carte en temps réel",
+        "Notifications avancées",
+        "Statistiques détaillées",
+        "Itinéraire intégré"
+      ]
+    },
+    
+    "premium": {
+      "name": "Premium",
+      "price": "100000",
+      "period": "par an",
+      "features": [
+        "Tout le contenu du Pro",
+        "Priorité sur les courses",
+        "Formation gratuite",
+        "Assurance incluse"
+      ]
+    }
+  },
+  "features": {
+    "unlimited": "Courses illimitées",
+    "support": "Support 24/7",
+    "map": "Carte temps réel",
+    "stats": "Statistiques",
+    "priority": "Priorité",
+    "training": "Formation",
+    "insurance": "Assurance",
+    "badge": "Badge Premium",
+    "commission": "Commission réduite"
+  },
+  
+  "validation": {
+    "termsRequired": "Vous devez accepter les conditions d'utilisation.",
+    "cardNumberInvalid": "Numéro de carte invalide (16 chiffres requis)",
+    "cardExpiryInvalid": "Date d'expiration invalide (MM/AA requis)",
+    "cardCVCInvalid": "CVC invalide (3 chiffres requis)",
+    "cardNameInvalid": "Nom du titulaire requis (minimum 3 caractères)",
+    "operatorRequired": "Opérateur requis",
+    "phoneInvalid": "Numéro de téléphone invalide"
+  },
+  
+  "configuration": {
+    "title": "Configuration du plan",
+    "duration": "Durée",
+    "selectYears": "Choisissez le nombre d'années",
+    "selectMonths": "Choisissez le nombre de mois",
+    "period": "Période",
+    "start": "Début",
+    "end": "Fin",
+    "paymentDetails": "Détails du paiement",
+    "price": "Prix",
+    "annual": "annuel",
+    "monthly": "mensuel",
+    "durationLabel": "Durée",
+    "total": "Total"
+  },
+
+  "payment": {
+    "title": "Méthode de paiement",
+    "cardNumber": "Numéro de carte",
+    "cardExpiry": "Date d'expiration",
+    "cardCVC": "CVC",
+    "cardholderName": "Nom du titulaire",
+    "cardholderPlaceholder": "Nom sur la carte",
+    "payNow": "Payer maintenant",
+    "processing": "Traitement en cours...",
+    "backToDashboard": "Retour au tableau de bord",
+    "securePayment": "Paiement sécurisé SSL",
+    "methods": {
+      "card": "Carte",
+      "mobile": "Mobile Money"
+    },
+    "terms": "En vous abonnant, vous acceptez nos Conditions d'utilisation et notre Politique de confidentialité.",
+    "annual": "annuel",
+    "monthly": "mensuel",
+    "operator": "Opérateur",
+    "selectOperator": "Sélectionner un opérateur",
+    "phoneNumber": "Numéro de téléphone",
+    "phonePlaceholder": "06 00 00 00 00",
+    "phoneHint": "Votre numéro pour Mobile Money",
+    "conditions": "Conditions d'utilisation",
+    "and": "et",
+    "privacy": "Politique de confidentialité",
+    "selectedPlan": "Plan sélectionné",
+    "duration": "Durée",
+    "period": "Période",
+    "to": "à",
+    "totalAmount": "Montant total",
+    "pendingNotice": "Votre paiement est en attente d'activation.",
+    "confirmation": "Confirmez vos informations avant de payer."
+  },
+
+  "loading": {
+    "plans": "Chargement des offres...",
+    "driverInfo": "Chargement des informations du chauffeur..."
+  },
+
+  "pending": {
+    "waitingForActivation": "Votre demande est bien reçue. Code de validation: ",
+    "title": "Activation en cours",
+    "redirecting": "Redirection vers le tableau de bord..."
+  },
+
+  "success": {
+    "title": "Paiement réussi !",
+    "message": "Votre abonnement est activé. Redirection vers le tableau de bord...",
+    "goToDashboard": "Accéder au tableau de bord"
+  },
+
+  "errors": {
+    "driverInfoMissing": "Informations du chauffeur manquantes.",
+    "authTokenMissing": "Jeton d'authentification manquant.",
+    "paymentError": "Une erreur est survenue lors du paiement.",
+    "corsError": "Erreur réseau ou CORS. Vérifiez la configuration du serveur.",
+    "title": "Erreur de paiement",
+    "close": "Fermer"
+  },
+
+  "driver": {
+    "defaultName": "Chauffeur"
+  },
+
+  "dur": {
+    "duration": {
+      "1year": "1 an",
+      "2years": "2 ans",
+      "3years": "3 ans",
+      "1month": "1 mois",
+      "3months": "3 mois",
+      "6months": "6 mois",
+      "12months": "12 mois"
+    }
+  },
+
+  "form": {
+    "searchCountry": "Rechercher un pays...",
+    "noResults": "Aucun résultat",
+    "format": "Format",
+    "fullNumber": "Numéro complet"
+  }
+}

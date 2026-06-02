@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /affichage
+Disallow: /parametre
+Disallow: /abonnement
+Disallow: /reserver
+
+Sitemap: https://waiz.app/sitemap.xml

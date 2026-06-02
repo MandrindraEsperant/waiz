@@ -1,0 +1,96 @@
+{
+  "header": {
+    "title": "Mes Abonnements",
+    "subtitle": "Gérez vos abonnements et consultez votre historique"
+  },
+  
+  "driver": {
+    "infoUnavailable": "Information non disponible",
+    "loadingInfo": "Chargement des informations...",
+    "type": {
+      "societe": "Entreprise",
+      "professionnel": "Professionnel",
+      "particulier": "Particulier"
+    }
+  },
+  
+  "tabs": {
+    "active": "Abonnement Actif",
+    "history": "Historique"
+  },
+  
+  "errors": {
+    "notConnected": "Vous devez être connecté pour voir vos abonnements",
+    "sessionExpired": "Session expirée. Veuillez vous reconnecter.",
+    "endpointNotFound": "Endpoint non trouvé. Vérifiez vos routes backend.",
+    "serverUnreachable": "Serveur non accessible. Vérifiez que le backend est démarré.",
+    "loadingError": "Erreur lors du chargement de vos données. Veuillez réessayer.",
+    "renewError": "Erreur lors du renouvellement. Veuillez réessayer."
+  },
+  
+  "loading": {
+    "text": "Chargement de vos abonnements..."
+  },
+  
+  "activeSubscription": {
+    "noSubscription": "Aucun abonnement actif",
+    "noSubscriptionDesc": "Vous n'avez pas d'abonnement actif en ce moment.",
+    "subscribeButton": "Souscrire à un abonnement",
+    
+    "period": "Période",
+    "amount": "Montant",
+    "timeRemaining": "Temps restant",
+    "paymentMethod": "Méthode de paiement",
+    "progress": "Progression de votre abonnement",
+    "today": "Aujourd'hui",
+    
+    "paymentMethods": {
+      "mobile_money": "Mobile Money",
+      "carte_bancaire": "Carte Bancaire",
+      "essai": "Essai gratuit"
+    },
+    
+    "renewButton": "Renouveler l'abonnement",
+    "viewOffers": "Voir les offres",
+    "processing": "Traitement...",
+    
+    "status": {
+      "active": "Actif",
+      "expired": "Expiré",
+      "trial": "ESSAI"
+    }
+  },
+  
+  "history": {
+    "title": "Historique des abonnements",
+    "noHistory": "Aucun historique d'abonnement",
+    "noHistoryDesc": "Vous n'avez pas encore souscrit à d'abonnement.",
+    "subscribeFirst": "Souscrire à votre premier abonnement",
+    "totalSubscriptions": "abonnement(s) au total",
+    
+    "start": "Début",
+    "end": "Fin",
+    "duration": "Durée",
+    "days": "jours",
+    "trial": "Essai Gratuit",
+    
+    "renewPlan": "Renouveler ce plan"
+  },
+  
+  "plans": {
+    "essai_gratuit": "Essai Gratuit",
+    "basique": "Basique",
+    "basic": "Basic",
+    "pro": "Pro",
+    "premium": "Premium",
+    "entreprise_basic": "Entreprise Basic",
+    "entreprise_pro": "Entreprise Pro"
+  },
+  
+  "general": {
+    "yes": "Oui",
+    "no": "Non",
+    "notSpecified": "Non spécifié",
+    "days": "jour(s)"
+  }
+}

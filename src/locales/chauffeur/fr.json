@@ -1,0 +1,105 @@
+{
+  "pageTitle": "Inscription du nouveau chauffeur",
+  "pageTitleClient": "Inscription du nouveau client",
+  "back": "Retour",
+  "cancel": "Annuler",
+  "register": "S'inscrire",
+  "saving": "Enregistrement...",
+
+  "clientLabel": "Client",
+  "chauffeurLabel": "Chauffeur",
+  "clientDesc": "Réservez et suivez vos trajets facilement",
+  "driverDesc": "Proposez vos services et gérez vos courses",
+  "clientInfo": "Informations du client à remplir",
+  "driverInfo": "Informations du chauffeur à remplir",
+
+  "firstName": "Prénom *",
+  "lastName": "Nom *",
+  "firstNamePlaceholder": "Ex : Jean",
+  "lastNamePlaceholder": "Ex : Rakoto",
+  "fullName": "Nom complet *",
+  "fullNamePlaceholder": "Ex : Charles",
+  "email": "Email *",
+  "emailPlaceholder": "Entrez votre email",
+  "password": "Mot de passe *",
+  "passwordPlaceholder": "Entrez votre mot de passe",
+  "confirmPassword": "Confirmer le mot de passe *",
+  "confirmPasswordPlaceholder": "Confirmez votre mot de passe",
+  "phone": "Téléphone *",
+  "phonePlaceholder": "Ex : 321234567",
+
+  "driverType": {
+    "label": "Type de chauffeur",
+    "individual": "Particulier",
+    "individualDesc": "Voiture personnelle",
+    "professional": "Professionnel",
+    "professionalDesc": "Taxi/VTC agréé",
+    "company": "Société",
+    "companyDesc": "Flotte d'entreprise"
+  },
+
+  "form": {
+    "searchCountry": "Rechercher un pays...",
+    "noResults": "Aucun résultat trouvé",
+    "format": "Format",
+    "fullNumber": "Numéro complet"
+  },
+
+  "validation": {
+    "firstNameRequired": "Le prénom est obligatoire",
+    "lastNameRequired": "Le nom est obligatoire",
+    "nameRequired": "Le nom est obligatoire",
+    "nameMinLength": "Le nom doit contenir au moins 2 caractères",
+    "emailRequired": "L'email est obligatoire",
+    "emailInvalid": "Veuillez entrer une adresse email valide",
+    "passwordRequired": "Le mot de passe est obligatoire",
+    "passwordMinLength": "Le mot de passe doit contenir au moins 4 caractères",
+    "passwordsDontMatch": "Les mots de passe ne correspondent pas",
+    "phoneRequired": "Le numéro de téléphone est requis",
+    "phoneMinLength": "Le numéro doit contenir au moins 8 chiffres",
+    "phoneDigitsOnly": "Le numéro ne doit contenir que des chiffres",
+    "driverTypeRequired": "Veuillez sélectionner un type de chauffeur"
+  },
+
+  "hints": {
+    "passwordHint": "Minimum 4 caractères",
+    "phoneHint": "Format : 8 chiffres minimum"
+  },
+
+  "success": {
+    "driverRegistered": "Chauffeur inscrit avec succès !",
+    "clientRegistered": "Client inscrit avec succès !"
+  },
+
+  "errors": {
+    "registrationError": "Erreur lors de l'inscription",
+    "loginAfterSignup": "Inscription réussie mais connexion automatique impossible",
+    "invalidData": "Données invalides",
+    "emailExists": "Un compte avec cet email existe déjà",
+    "serverError": "Erreur serveur. Veuillez réessayer plus tard.",
+    "networkError": "Impossible de contacter le serveur. Vérifiez que le backend est démarré sur le port 8000.",
+    "configError": "Erreur de configuration"
+  },
+
+  "features": {
+    "joinTeam": "Rejoignez notre équipe de chauffeurs",
+    "becomePartner": "Devenez partenaire Waiz et développez votre activité",
+    "joinPassengers": "Voyagez en toute simplicité",
+    "passengerDesc": "Réservez un trajet en quelques clics avec Waiz",
+    "flexibility": "Flexibilité horaire",
+    "flexibilityDesc": "Travaillez quand vous voulez",
+    "income": "Revenus attractifs",
+    "incomeDesc": "Gagnez selon vos performances",
+    "security": "Sécurité garantie",
+    "securityDesc": "Environnement de travail sécurisé"
+  },
+
+  "help": {
+    "title": "Informations importantes",
+    "requiredFields": "Tous les champs marqués d'un * sont obligatoires",
+    "nameRequirement": "Le nom doit contenir au moins 2 caractères",
+    "passwordRequirement": "Le mot de passe doit contenir au moins 4 caractères",
+    "emailRequirement": "L'email doit être valide",
+    "phoneRequirement": "Le téléphone doit contenir au moins 8 chiffres"
+  }
+}

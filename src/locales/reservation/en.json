@@ -1,0 +1,59 @@
+{
+  "pageTitle": "Available rides",
+  "publierCourse": "Publish a ride",
+  "fermerFormulaire": "Close form",
+  "searchPlaceholder": "Search by driver, city...",
+  "filtres": "Filters",
+  "effacerFiltres": "Clear filters",
+  "prixMin": "Min price",
+  "prixMax": "Max price",
+  "date": "Date",
+  "zone": "Zone",
+  "toutesZones": "All zones",
+  "chargement": "Loading rides...",
+  "aucunePublication": "No rides available at the moment",
+  "trajets": "trips",
+  "places": "seats",
+  "personne": "pers.",
+  "reserver": "BOOK",
+  "form": {
+    "title": "Publish a new ride",
+    "zoneDepart": "Departure zone",
+    "zoneArrivee": "Arrival zone",
+    "selectZoneDepart": "Select departure zone",
+    "selectZoneArrivee": "Select arrival zone",
+    "dateDepart": "Departure date",
+    "heureDepart": "Departure time",
+    "nbrPassagers": "Number of passengers",
+    "prixParPersonne": "Price per person (€)",
+    "description": "Description (optional)",
+    "descriptionPlaceholder": "Additional information about the trip...",
+    "options": "Options",
+    "bagagesAutorises": "Luggage allowed",
+    "animauxAutorises": "Animals allowed",
+    "fumeurAutorise": "Smoking allowed",
+    "annuler": "Cancel",
+    "publierCourse": "Publish ride",
+    "publicationEnCours": "Publishing...",
+    "confirmAnnuler": "Do you really want to cancel the publication?"
+  },
+  "errors": {
+    "zoneDepartRequired": "Departure zone is required",
+    "zoneArriveeRequired": "Arrival zone is required",
+    "zonesDifferent": "Departure and arrival zones must be different",
+    "dateRequired": "Departure date is required",
+    "heureRequired": "Departure time is required",
+    "datePassee": "Departure date cannot be in the past",
+    "nbrPassagerInvalid": "Number of passengers must be between 1 and 8",
+    "prixRequired": "Price is required",
+    "publicationFailed": "Publication failed. Please try again."
+  },
+  "success": {
+    "publiee": "Ride successfully published!"
+  },
+  "alerts": {
+    "loginRequired": "Please log in to book",
+    "reservationSuccess": "Booking successful!",
+    "reservationError": "Error during booking"
+  }
+}

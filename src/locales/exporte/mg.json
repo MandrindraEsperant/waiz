@@ -1,0 +1,47 @@
+{
+  "export": {
+    "title": "FAMOAHANA NY FANDEHANANA",
+    "backButton": "← Hiverina amin'ny fandehanana",
+    "period": {
+      "title": "Fotoana famoahana",
+      "all": "Fandehanana rehetra",
+      "range": "Ara-potoana",
+      "startDate": "Daty fanombohana :",
+      "endDate": "Daty farany :"
+    },
+    "format": {
+      "title": "Endrika famoahana",
+      "fileType": "Toerana hitehirizana ny rakitra :",
+      "csv": "Rakitra CSV (.csv)",
+      "excel": "Rakitra Excel (.xlsx)",
+      "pdf": "Antontan-taratasy PDF (.pdf)"
+    },
+    "exportButton": "Famoahana ny fandehanana",
+    "exporting": "Famoahana mitohy...",
+    "summary": {
+      "title": "Famintinana ny famoahana",
+      "period": "Fotoana voafantina:",
+      "allPeriod": "Fandehanana rehetra",
+      "format": "Endrika:",
+      "availableRides": "Fandehanana misy:",
+      "ridesInPeriod": "Fandehanana ao anatin'ny fotoana:",
+      "ridesCount": "fandehanana",
+      "user": "Mpampiasa"
+    },
+    "alerts": {
+      "noData": "Tsy misy angona azo amidy ho an'ny fotoana voafantina",
+      "dateRequired": "Safidio ny daty roa ho an'ny fotoana.",
+      "invalidDate": "Tsy afaka manaraka ny daty farany ny daty fanombohana.",
+      "loadError": "Hadisoana rehefa mampiditra ny fandehanana",
+      "exportError": "Hadisoana rehefa mamoaka",
+      "success": "Nahomby ny famoahana {{format}} ! {{count}} fandehanana no nivoaka."
+    },
+    "pdf": {
+      "title": "Famoahana ny Fandehanana",
+      "period": "Fotoana:",
+      "rideCount": "Isan'ny fandehanana:",
+      "exportDate": "Daty famoahana:",
+      "user": "Nampidirina tamin'ny"
+    }
+  }
+}

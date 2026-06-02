@@ -1,0 +1,54 @@
+{
+  "pageTitle": "Fitantanana faritra serivisy VTC",
+  "newZone": "Faritra Vaovao",
+  "refresh": "Ampahavaozina",
+  
+  "zoneCreated": "Nohavaozina soa aman-tsara ny faritra!",
+  "zoneUpdated": "Niova soa aman-tsara ny faritra!",
+  "zoneDeleted": "Nofafana soa aman-tsara ny faritra!",
+  "zoneReady": "Faritra \"{{nom}}\" vonona ho noforonina!",
+  
+  "searchPlaceholder": "Hitady faritra amin'ny anarana na ID...",
+  "clearSearch": "Fafana",
+  "searchResults": "{{count}} faritra{{s}} hita ho an'ny \"{{term}}\"",
+  "noResults": "Tsy misy faritra hita ho an'ny \"{{term}}\"",
+  "totalZones": "Total",
+  "filteredZones": "Sivana",
+  
+  "addZone": "Hanampy Faritra",
+  "editZone": "Hanova ny Faritra",
+  "zoneName": "Anaran'ny faritra",
+  "zoneNamePlaceholder": "Ampidiro ny anaran'ny faritra",
+  "selectedPosition": "Toerana voafantina",
+  "latitude": "Latitude",
+  "longitude": "Longitude",
+  "cancel": "Afoana",
+  "save": "Tehirizina",
+  "saving": "Fanodinana...",
+  
+  "availableZones": "Faritra Misy",
+  "zones": "faritra",
+  "active": "Mavitrika",
+  "noZones": "Tsy misy faritra hita",
+  "noSearchResults": "Tsy misy faritra mifanaraka amin'ny fikarohana",
+  "clearSearchBtn": "Fafana ny fikarohana",
+  
+  "deleteZone": "Hamafa ny faritra",
+  "deleteConfirmation": "Azo antoka fa te-hamafa ity faritra ity ianao?",
+  "deleteWarning": "Tsy azo averina ity hetsika ity.",
+  "heatmapWarning": "⚠️ Hesorina koa amin'ny heatmap ny dashboard ity faritra ity.",
+  "delete": "Fafana",
+  "deleting": "Famafana...",
+  
+  "loadingZones": "Fanodinana ny faritra...",
+  "loading": "Fanodinana...",
+  "errorLoadingZones": "Hadisoana rehefa nanodina ny faritra",
+  "errorSavingZone": "Hadisoana rehefa natso-ponenana ny faritra",
+  "errorDeletingZone": "Hadisoana rehefa namafa ny faritra",
+  
+  "zoneFromDashboard": "📍 Faritra azo avy amin'ny Dashboard",
+  "instruction": "Efa voafantina eo amin'ny sarintany ny faritra. Tsindrio ny \"Hanampy Faritra\" raha te-hankatoavina.",
+  
+  "validationNameRequired": "Ampidiro ny anaran'ny faritra ary safidio ny toerana",
+  "newPosition": "Toerana Vaovao"
+}

@@ -1,0 +1,54 @@
+{
+  "pageTitle": "Gestion des zones de service VTC",
+  "newZone": "Nouvelle Zone",
+  "refresh": "Actualiser",
+  
+  "zoneCreated": "Zone créée avec succès !",
+  "zoneUpdated": "Zone modifiée avec succès !",
+  "zoneDeleted": "Zone supprimée avec succès !",
+  "zoneReady": "Zone \"{{nom}}\" prête à être créée !",
+  
+  "searchPlaceholder": "Rechercher une zone par nom ou ID...",
+  "clearSearch": "Effacer",
+  "searchResults": "{{count}} zone{{s}} trouvée{{s}} pour \"{{term}}\"",
+  "noResults": "Aucune zone trouvée pour \"{{term}}\"",
+  "totalZones": "Total",
+  "filteredZones": "Filtrées",
+  
+  "addZone": "Ajouter une Zone",
+  "editZone": "Modifier la Zone",
+  "zoneName": "Nom de la zone",
+  "zoneNamePlaceholder": "Entrez le nom de la zone",
+  "selectedPosition": "Position sélectionnée",
+  "latitude": "Latitude",
+  "longitude": "Longitude",
+  "cancel": "Annuler",
+  "save": "Enregistrer",
+  "saving": "Enregistrement...",
+  
+  "availableZones": "Zones Disponibles",
+  "zones": "zones",
+  "active": "Active",
+  "noZones": "Aucune zone trouvée",
+  "noSearchResults": "Aucune zone ne correspond à votre recherche",
+  "clearSearchBtn": "Effacer la recherche",
+  
+  "deleteZone": "Supprimer la zone",
+  "deleteConfirmation": "Êtes-vous sûr de vouloir supprimer cette zone ?",
+  "deleteWarning": "Cette action est irréversible.",
+  "heatmapWarning": "⚠️ Cette zone sera également retirée du heatmap du dashboard.",
+  "delete": "Supprimer",
+  "deleting": "Suppression...",
+  
+  "loadingZones": "Chargement des zones...",
+  "loading": "Chargement...",
+  "errorLoadingZones": "Erreur lors du chargement des zones",
+  "errorSavingZone": "Erreur lors de la sauvegarde de la zone",
+  "errorDeletingZone": "Erreur lors de la suppression de la zone",
+  
+  "zoneFromDashboard": "📍 Zone reçue du Dashboard",
+  "instruction": "La zone est pré-sélectionnée sur la carte. Cliquez sur \"Ajouter la Zone\" pour la confirmer.",
+  
+  "validationNameRequired": "Veuillez saisir un nom de zone et sélectionner un emplacement",
+  "newPosition": "Nouvelle Position"
+}

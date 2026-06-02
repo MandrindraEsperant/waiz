@@ -1,0 +1,96 @@
+{
+  "header": {
+    "title": "Ny Famandrihako",
+    "subtitle": "Tantano ny famandrihanao sy jereo ny tantaranao"
+  },
+  
+  "driver": {
+    "infoUnavailable": "Tsy misy vaovao",
+    "loadingInfo": "Manamboatra vaovao...",
+    "type": {
+      "societe": "Orinasa",
+      "professionnel": "Matihanina",
+      "particulier": "Olona tsirairay"
+    }
+  },
+  
+  "tabs": {
+    "active": "Famandrihana Mavitrika",
+    "history": "Tantara"
+  },
+  
+  "errors": {
+    "notConnected": "Tsy maintsy miditra ianao mba hahita ny famandrihanao",
+    "sessionExpired": "Lany ny fotoam-pidirana. Midira indray azafady.",
+    "endpointNotFound": "Tsy hita ny endpoint. Jereo ny làlana backend.",
+    "serverUnreachable": "Tsy azo idirana ny server. Ataovy azo antoka fa mandeha ny backend.",
+    "loadingError": "Nisy olana nandritra ny fampidirana angon-drakitra. Andramo indray azafady.",
+    "renewError": "Nisy olana nandritra ny fanavaozana. Andramo indray azafady."
+  },
+  
+  "loading": {
+    "text": "Mampiditra ny famandrihanao..."
+  },
+  
+  "activeSubscription": {
+    "noSubscription": "Tsy misy famandrihana mavitrika",
+    "noSubscriptionDesc": "Tsy manana famandrihana mavitrika ianao amin'izao fotoana izao.",
+    "subscribeButton": "Misoratra anarana amin'ny famandrihana",
+    
+    "period": "Fotoana",
+    "amount": "Vola",
+    "timeRemaining": "Fotoana sisa",
+    "paymentMethod": "Fomba fandoavam-bola",
+    "progress": "Ny fandrosoan'ny famandrihanao",
+    "today": "Androany",
+    
+    "paymentMethods": {
+      "mobile_money": "Mobile Money",
+      "carte_bancaire": "Kara-banky",
+      "essai": "Fandrenesana maimaim-poana"
+    },
+    
+    "renewButton": "Havaozina ny famandrihana",
+    "viewOffers": "Hijery ny tolotra",
+    "processing": "Fanodinana...",
+    
+    "status": {
+      "active": "Mavitrika",
+      "expired": "Lany daty",
+      "trial": "FANDRENESANA"
+    }
+  },
+  
+  "history": {
+    "title": "Tantaran'ny Famandrihana",
+    "noHistory": "Tsy misy tantaran'ny famandrihana",
+    "noHistoryDesc": "Mbola tsy nisoratra anarana tamin'ny famandrihana ianao.",
+    "subscribeFirst": "Misoratra anarana amin'ny famandrihana voalohany",
+    "totalSubscriptions": "famandrihana totaly",
+    
+    "start": "Fiantombohana",
+    "end": "Fiafarana",
+    "duration": "Faharetana",
+    "days": "andro",
+    "trial": "Fandrenesana Maimaim-poana",
+    
+    "renewPlan": "Havaozina io plana io"
+  },
+  
+  "plans": {
+    "essai_gratuit": "Fandrenesana Maimaim-poana",
+    "basique": "Fototra",
+    "basic": "Fototra",
+    "pro": "Pro",
+    "premium": "Premium",
+    "entreprise_basic": "Orinasa Fototra",
+    "entreprise_pro": "Orinasa Pro"
+  },
+  
+  "general": {
+    "yes": "Eny",
+    "no": "Tsia",
+    "notSpecified": "Tsy voafaritra",
+    "days": "andro"
+  }
+}

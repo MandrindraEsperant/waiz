@@ -1,0 +1,34 @@
+{
+  "logo": {
+    "title": "Waiz",
+    "subtitle": "Transport"
+  },
+  "dashboard": {
+    "name": "Dashboard",
+    "description": "Overview"
+  },
+  "rides": {
+    "name": "Rides",
+    "description": "Ride tracking",
+    "list": " List",
+    "listDescription": "View all rides",
+    "reservation": "Reservations",
+    "reservationDescription": "Manage reservations"
+  },
+  "zones": {
+    "name": "Zones",
+    "description": "Service zones"
+  },
+  "calendar": {
+    "name": "Calendar",
+    "description": "Upcoming events"
+  },
+  "clients": {
+    "name": "Client Management",
+    "description": "Client list and management"
+  },
+  "parametre": {
+    "name": "Settings",
+    "description": "Manage your preferences"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "pageTitle": "Courses disponibles",
+  "publierCourse": "Publier une course",
+  "fermerFormulaire": "Fermer le formulaire",
+  "searchPlaceholder": "Rechercher par chauffeur, ville...",
+  "filtres": "Filtres",
+  "effacerFiltres": "Effacer les filtres",
+  "prixMin": "Prix minimum",
+  "prixMax": "Prix maximum",
+  "date": "Date",
+  "zone": "Zone",
+  "toutesZones": "Toutes les zones",
+  "chargement": "Chargement des courses...",
+  "aucunePublication": "Aucune course disponible pour le moment",
+  "trajets": "trajets",
+  "places": "places",
+  "personne": "pers.",
+  "reserver": "RÉSERVER",
+  "form": {
+    "title": "Publier une nouvelle course",
+    "zoneDepart": "Zone de départ",
+    "zoneArrivee": "Zone d'arrivée",
+    "selectZoneDepart": "Sélectionner la zone de départ",
+    "selectZoneArrivee": "Sélectionner la zone d'arrivée",
+    "dateDepart": "Date de départ",
+    "heureDepart": "Heure de départ",
+    "nbrPassagers": "Nombre de passagers",
+    "prixParPersonne": "Prix par personne (€)",
+    "description": "Description (optionnelle)",
+    "descriptionPlaceholder": "Informations complémentaires sur le trajet...",
+    "options": "Options",
+    "bagagesAutorises": "Bagages autorisés",
+    "animauxAutorises": "Animaux acceptés",
+    "fumeurAutorise": "Fumeur autorisé",
+    "annuler": "Annuler",
+    "publierCourse": "Publier la course",
+    "publicationEnCours": "Publication en cours...",
+    "confirmAnnuler": "Voulez-vous vraiment annuler la publication ?"
+  },
+  "errors": {
+    "zoneDepartRequired": "La zone de départ est requise",
+    "zoneArriveeRequired": "La zone d'arrivée est requise",
+    "zonesDifferent": "Les zones de départ et d'arrivée doivent être différentes",
+    "dateRequired": "La date de départ est requise",
+    "heureRequired": "L'heure de départ est requise",
+    "datePassee": "La date de départ ne peut pas être dans le passé",
+    "nbrPassagerInvalid": "Le nombre de passagers doit être entre 1 et 8",
+    "prixRequired": "Le prix est requis",
+    "publicationFailed": "Échec de la publication. Veuillez réessayer."
+  },
+  "success": {
+    "publiee": "Course publiée avec succès !"
+  },
+  "alerts": {
+    "loginRequired": "Veuillez vous connecter pour réserver",
+    "reservationSuccess": "Réservation effectuée avec succès !",
+    "reservationError": "Erreur lors de la réservation"
+  }
+}

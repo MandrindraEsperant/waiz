@@ -1,0 +1,22 @@
+node_modules
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.env
+.env.*
+.git
+.gitignore
+.DS_Store
+Thumbs.db
+build/
+coverage/
+**/__tests__/
+**/*.log
+.vscode/
+.idea/
+
+node_modules
+   .next
+   build
+   dist
+   .git

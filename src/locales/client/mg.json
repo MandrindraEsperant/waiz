@@ -1,0 +1,101 @@
+{
+  "header": {
+    "title": "Mpanjifa Vaovao",
+    "back": "Hiverina",
+    "save": "Tehiriz ny mpanjifa",
+    "cancel": "Afo",
+    "saving": "Mitahirizana...",
+    "listTitle": "Lisitry ny Mpanjifa",
+    "newClient": "Mpanjifa Vaovao",
+    "searchPlaceholder": "Mitadiava mpanjifa..."
+  },
+  "form": {
+    "clientInfo": "Fampahalalana momba ny Mpanjifa",
+    "formDescription": "Fenoy ny fampahalalana ilaina mba hanampiana mpanjifa vaovao",
+    "name": "Anarana feno",
+    "namePlaceholder": "Ohatra: Jean Dupont",
+    "phone": "Finday",
+    "required": "*",
+    "charCount": "soratra",
+    "searchCountry": "Mitadiava firenena...",
+    "noResults": "Tsy hita firenena",
+    "fullNumber": "Laharana feno",
+    "format": "Endrika"
+  },
+  "validation": {
+    "nameRequired": "Mila ny anarana",
+    "nameMinLength": "Tsy maintsy misy soratra roa farafahakeliny ny anarana",
+    "phoneRequired": "Mila ny laharan'ny finday",
+    "phoneInvalid": "Laharana finday diso"
+  },
+  "help": {
+    "title": "💡 Fampahalalana Zava-dehibe",
+    "points": [
+      "Mila fenoina ny saha rehetra misy *",
+      "Tsy maintsy misy soratra roa farafahakeliny ny anarana",
+      "Safidio ny firenena ho an'ny endrika finday mety",
+      "Hotehirizina miaraka amin'ny kaody iraisam-pirenena ny laharana",
+      "Ampiasao ny fikarohana mba hitadiavana ny firenenanao haingana",
+      "Ny ID mpanjifa dia ateraky ny rafitra ho azy"
+    ]
+  },
+  "messages": {
+    "success": "Tafiditra soa aman-tsara ny mpanjifa!",
+    "error": "Nisy olana nandritra ny fanampiana mpanjifa",
+    "clientExists": "Efa misy mpanjifa manana anarana io",
+    "serverError": "Olana amin'ny mpizara. Andramo indray any aoriana.",
+    "connectionError": "Tsy afaka mifandray amin'ny mpizara. Jereo ny fifandraisanao.",
+    "configError": "Olana amin'ny fanamboarana",
+    "editSuccess": "Novana soa aman-tsara ny mpanjifa!",
+    "deleteSuccess": "Nofafana soa aman-tsara ny mpanjifa!",
+    "editError": "Nisy olana nandritra ny fanovana mpanjifa",
+    "deleteError": "Nisy olana nandritra ny famafana mpanjifa",
+    "calling": "Antso ho an'ny",
+    "noNumber": "Tsy misy nomeraon-telefaona",
+    "invalidNumber": "Tsy mety ny nomerao",
+    "callError": "Tsy afaka miantso",
+    "numberCopied": "Voasoratra ny nomerao",
+    "copyManual": "Soraty amin'ny tanana ity nomerao ity",
+    "callWith": "Miantso amin'ny",
+    "chooseApp": "Fidio ny rindrankajy",
+    "skype": "Skype",
+    "whatsapp": "WhatsApp",
+    "teams": "Microsoft Teams"
+  },
+  "table": {
+    "id": "ID",
+    "name": "Anarana",
+    "phone": "Finday",
+    "actions": "Asa",
+    "edit": "Hanova",
+    "delete": "Hamafa",
+    "total": "Totaly",
+    "clients": "mpanjifa",
+    "noData": "Tsy hita mpanjifa",
+    "noSearchResults": "Tsy misy mpanjifa mifanaraka amin'ny fikarohanao",
+    "createFirst": "Mamorona mpanjifa voalohany",
+    "showAll": "Asehoy ny mpanjifa rehetra"
+  },
+  "modals": {
+    "editTitle": "Hanova ny Mpanjifa",
+    "deleteTitle": "Hamafy ny Famafana",
+    "deleteConfirm": "Azo antoka ve fa te-hamafa ny mpanjifa :",
+    "deleteWarning": "Tsy azo averina intsonny ity asa ity!",
+    "confirmDelete": "Hamafa",
+    "deleting": "Famafana..."
+  },
+  "phoneErrors": {
+    "MG": "Ny laharana Malagasy dia tsy maintsy manomboka amin'ny 32-38 ary misy isa 9",
+    "FR": "Ny laharana frantsay dia tsy maintsy misy isa 9",
+    "US": "Ny laharana Amerikana dia tsy maintsy misy isa 10",
+    "GB": "Ny laharana Britanika dia tsy maintsy misy isa 10-11",
+    "DE": "Ny laharana Alemàna dia tsy maintsy misy isa 10-11",
+    "CA": "Ny laharana Kanadiana dia tsy maintsy misy isa 10",
+    "AU": "Ny laharana Aostraliana dia tsy maintsy misy isa 9",
+    "BR": "Ny laharana Breziliana dia tsy maintsy misy isa 10-11",
+    "CN": "Ny laharana Sinoa dia tsy maintsy misy isa 11",
+    "IN": "Ny laharana Indiana dia tsy maintsy misy isa 10",
+    "JP": "Ny laharana Japoney dia tsy maintsy misy isa 10-11",
+    "default": "Laharana finday diso (6-15 isa)"
+  }
+}

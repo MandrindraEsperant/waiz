@@ -1,0 +1,40 @@
+{
+  "header": {
+    "title": "VTC Dashboard - Smart Predictions",
+    "subtitle": "Log in to access your space"
+  },
+  "form": {
+    "title": "LOGIN",
+    "subtitle": "Access your VTC account",
+    "emailLabel": "Email:",
+    "emailPlaceholder": "Enter your email",
+    "passwordLabel": "Password:",
+    "passwordPlaceholder": "Enter your password"
+  },
+  "buttons": {
+    "login": "Log in",
+    "loggingIn": "Logging in..."
+  },
+  "links": {
+    "forgotPassword": "Forgot password?",
+    "register": "No account yet? Sign up"
+  },
+  "footer": {
+    "copyright": "VTC Platform - Smart Predictions &copy; 2025"
+  },
+  "validation": {
+    "requiredFields": "Please fill in all fields.",
+    "invalidEmail": "Please enter a valid email address.",
+    "passwordMinLength": "Password must be at least 4 characters long."
+  },
+  "errors": {
+    "loginFailed": "Login failed",
+    "timeout": "Connection timed out. Please try again.",
+    "serverError": "Server error",
+    "networkError": "Unable to connect to server. Check your connection.",
+    "unexpectedError": "An unexpected error occurred."
+  },
+  "forgotPassword": {
+    "message": "Password recovery feature to be implemented"
+  }
+}

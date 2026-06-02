@@ -1,0 +1,59 @@
+{
+  "pageTitle": "Kajy misy",
+  "publierCourse": "Mamoaka kajy",
+  "fermerFormulaire": "Hanidy ny formulaire",
+  "searchPlaceholder": "Karohy amin'ny mpamily, tanàna...",
+  "filtres": "Sivana",
+  "effacerFiltres": "Hanala ny sivana",
+  "prixMin": "Vidiny farany ambany",
+  "prixMax": "Vidiny farany ambony",
+  "date": "Daty",
+  "zone": "Faritra",
+  "toutesZones": "Faritra rehetra",
+  "chargement": "Am-pakarana ny kajy...",
+  "aucunePublication": "Tsy misy kajy misy ankehitriny",
+  "trajets": "dia",
+  "places": "toerana",
+  "personne": "ol.",
+  "reserver": "HAMANDRIKA",
+  "form": {
+    "title": "Mamoaka kajy vaovao",
+    "zoneDepart": "Faritra fiaingana",
+    "zoneArrivee": "Faritra haleha",
+    "selectZoneDepart": "Fidio ny faritra fiaingana",
+    "selectZoneArrivee": "Fidio ny faritra haleha",
+    "dateDepart": "Daty fiaingana",
+    "heureDepart": "Ora fiaingana",
+    "nbrPassagers": "Isan'ny mpandeha",
+    "prixParPersonne": "Vidy isan'olona (€)",
+    "description": "Fanazavana fanampiny",
+    "descriptionPlaceholder": "Fanazavana fanampiny momba ny dia...",
+    "options": "Safidy",
+    "bagagesAutorises": "Entana azo entina",
+    "animauxAutorises": "Biby azo entina",
+    "fumeurAutorise": "Fifohana sigara azo atao",
+    "annuler": "Avela",
+    "publierCourse": "Mamoaka kajy",
+    "publicationEnCours": "Ampamoaka...",
+    "confirmAnnuler": "Tena tianao hofoanana ve ny famoahana?"
+  },
+  "errors": {
+    "zoneDepartRequired": "Ilaina ny faritra fiaingana",
+    "zoneArriveeRequired": "Ilaina ny faritra haleha",
+    "zonesDifferent": "Tsy mitovy ny faritra fiaingana sy haleha",
+    "dateRequired": "Ilaina ny daty fiaingana",
+    "heureRequired": "Ilaina ny ora fiaingana",
+    "datePassee": "Tsy mety ny daty efa lasa",
+    "nbrPassagerInvalid": "Mila 1 hatramin'ny 8 ny isan'ny mpandeha",
+    "prixRequired": "Ilaina ny vidiny",
+    "publicationFailed": "Tsy nahomby ny famoahana. Andramo indray."
+  },
+  "success": {
+    "publiee": "Kajy navoaka soa aman-tsara !"
+  },
+  "alerts": {
+    "loginRequired": "Midira aloha mba hamandrika",
+    "reservationSuccess": "Vita soa aman-tsara ny famandrihana !",
+    "reservationError": "Tsy nahomby ny famandrihana"
+  }
+}

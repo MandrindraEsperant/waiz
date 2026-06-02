@@ -1,0 +1,85 @@
+{
+  "pageTitle": "Fisoratra anarana mpamily vaovao",
+  "back": "Miverina",
+  "cancel": "Afoana",
+  "register": "Hisoratra anarana",
+  "saving": "Fanodinana...",
+  
+  "driverInfo": "Ny fampahalalana momba ny mpamily tokony hotefaina",
+  "fullName": "Anarana feno *",
+  "fullNamePlaceholder": "Oh: Charles",
+  "email": "Email *",
+  "emailPlaceholder": "Ampidiro ny email-nao",
+  "password": "Tenimiafina *",
+  "passwordPlaceholder": "Ampidiro ny tenimiafinao",
+  "phone": "Finday *",
+  "phonePlaceholder": "Oh: 0341234567",
+  
+  "driverType": {
+    "label": "Karazana mpamily",
+    "individual": "Manokana",
+    "individualDesc": "Fiara manokana",
+    "professional": "Mpamily matihanina",
+    "professionalDesc": "Taxisy/VTC manana fahazoan-dàlana",
+    "company": "Orinasa",
+    "companyDesc": "Fiara maro an'ny orinasa"
+  },
+  
+  "form": {
+    "searchCountry": "Mitady firenena...",
+    "noResults": "Tsy nahitana vokatra",
+    "format": "Endrika",
+    "fullNumber": "Laharana feno"
+  },
+  
+  "validation": {
+    "nameRequired": "Ilaina ny anarana",
+    "nameMinLength": "Tokony misy farafahakeliny soratra 2 ny anarana",
+    "emailRequired": "Ilaina ny email",
+    "emailInvalid": "Ampidiro adiresy email mety",
+    "passwordRequired": "Ilaina ny tenimiafina",
+    "passwordMinLength": "Tokony misy farafahakeliny soratra 4 ny tenimiafina",
+    "phoneRequired": "Ny laharana finday dia ilaina",
+    "phoneMinLength": "Tokony hisy isa farafahakeliny 8 ny laharana",
+    "phoneDigitsOnly": "Tsy mainka misy isa fotsiny ny laharana",
+    "driverTypeRequired": "Safidio ny karazana mpamily"
+  },
+  
+  "hints": {
+    "passwordHint": "Farafahakeliny soratra 4",
+    "phoneHint": "Endrika: isa 10 tsy misy banga"
+  },
+  
+  "success": {
+    "driverRegistered": "Voasoratra anarana soa aman-tsara ny mpamily!"
+  },
+  
+  "errors": {
+    "registrationError": "Hadisoana rehefa manoratra anarana ny mpamily",
+    "invalidData": "Angona tsy mety",
+    "emailExists": "Efa misy mpamily manana io email io",
+    "serverError": "Hadisoana mpizara. Andramo indray any aoriana.",
+    "networkError": "Tsy afaka mifandray amin'ny mpizara. Jereo ny fifandraisanao.",
+    "configError": "Hadisoana fanamboarana"
+  },
+  
+  "features": {
+    "joinTeam": "Miaraha amin'ny ekipanay mpamily",
+    "becomePartner": "Lasà mpiara-miasa Waiz ary ampandroso ny raharahanao",
+    "flexibility": "Fahafahana mifidy fotoana",
+    "flexibilityDesc": "Miasa araka ny fotoana tianao",
+    "income": "Fidiram-bola mahaliana",
+    "incomeDesc": "Hahazo araka ny fahombiazanao",
+    "security": "Fiarovana azo antoka",
+    "securityDesc": "Toeram-piasana azo antoka"
+  },
+  
+  "help": {
+    "title": "💡 Fampahalalana manan-danja",
+    "requiredFields": "Ilaina ny bokotra rehetra misy *",
+    "nameRequirement": "Tokony misy farafahakeliny soratra 2 ny anarana",
+    "passwordRequirement": "Tokony misy farafahakeliny soratra 4 ny tenimiafina",
+    "emailRequirement": "Tokony mety ny email",
+    "phoneRequirement": "Tokony misy isa 10 marina ny finday"
+  }
+}

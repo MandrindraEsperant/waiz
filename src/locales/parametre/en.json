@@ -1,0 +1,96 @@
+{
+  "header": {
+    "title": "My Subscriptions",
+    "subtitle": "Manage your subscriptions and view your history"
+  },
+  
+  "driver": {
+    "infoUnavailable": "Information unavailable",
+    "loadingInfo": "Loading information...",
+    "type": {
+      "societe": "Company",
+      "professionnel": "Professional",
+      "particulier": "Individual"
+    }
+  },
+  
+  "tabs": {
+    "active": "Active Subscription",
+    "history": "History"
+  },
+  
+  "errors": {
+    "notConnected": "You must be logged in to view your subscriptions",
+    "sessionExpired": "Session expired. Please log in again.",
+    "endpointNotFound": "Endpoint not found. Check your backend routes.",
+    "serverUnreachable": "Server unreachable. Make sure the backend is running.",
+    "loadingError": "Error loading your data. Please try again.",
+    "renewError": "Error during renewal. Please try again."
+  },
+  
+  "loading": {
+    "text": "Loading your subscriptions..."
+  },
+  
+  "activeSubscription": {
+    "noSubscription": "No active subscription",
+    "noSubscriptionDesc": "You don't have an active subscription at the moment.",
+    "subscribeButton": "Subscribe to a plan",
+    
+    "period": "Period",
+    "amount": "Amount",
+    "timeRemaining": "Time remaining",
+    "paymentMethod": "Payment method",
+    "progress": "Your subscription progress",
+    "today": "Today",
+    
+    "paymentMethods": {
+      "mobile_money": "Mobile Money",
+      "carte_bancaire": "Bank Card",
+      "essai": "Free trial"
+    },
+    
+    "renewButton": "Renew subscription",
+    "viewOffers": "View offers",
+    "processing": "Processing...",
+    
+    "status": {
+      "active": "Active",
+      "expired": "Expired",
+      "trial": "TRIAL"
+    }
+  },
+  
+  "history": {
+    "title": "Subscription History",
+    "noHistory": "No subscription history",
+    "noHistoryDesc": "You haven't subscribed to any plan yet.",
+    "subscribeFirst": "Subscribe to your first plan",
+    "totalSubscriptions": "subscription(s) total",
+    
+    "start": "Start",
+    "end": "End",
+    "duration": "Duration",
+    "days": "days",
+    "trial": "Free Trial",
+    
+    "renewPlan": "Renew this plan"
+  },
+  
+  "plans": {
+    "essai_gratuit": "Free Trial",
+    "basique": "Basic",
+    "basic": "Basic",
+    "pro": "Pro",
+    "premium": "Premium",
+    "entreprise_basic": "Enterprise Basic",
+    "entreprise_pro": "Enterprise Pro"
+  },
+  
+  "general": {
+    "yes": "Yes",
+    "no": "No",
+    "notSpecified": "Not specified",
+    "days": "day(s)"
+  }
+}

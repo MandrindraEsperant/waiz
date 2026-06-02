@@ -1,0 +1,187 @@
+{
+  "subscription": {
+    "pageTitle": "Famandrihana Waiz",
+    "title": "Fidio ny Famandrihanao",
+    "subtitle": "Alefaso ny tolotra rehetra amin'ny fampiharana",
+    "freeTrial": "Fandrenesana Maimaim-poana 7 Andro",
+    "featuresTitle": "Inona no tafiditra",
+    "choosePlan": "Fidio io plana io",
+    "currentPlan": "Plana ankehitriny",
+    "month": "volana",
+    "months": "volana",
+    "year": "taona",
+    "years": "taona",
+    "save": "voatahiry",
+    "popular": "Malaza",
+    "duration": {
+      "1year": "1 taona",
+      "2years": "2 taona",
+      "1month": "1 volana",
+      "3months": "3 volana",
+      "6months": "6 volana",
+      "12months": "12 volana"
+    }
+  },
+  
+  "plans": {
+    "basic": {
+      "name": "Fototra",
+      "price": "0",
+      "period": "Maimaim-poana",
+      "features": [
+        "10 fandeha isam-bolana",
+        "Tsy misy ny fitahirizana ny dia",
+        "Sarin-tany fototra",
+        "Fampandrenesana mahazatra"
+      ]
+    },
+    
+    "pro": {
+      "name": "Pro",
+      "price": "10000",
+      "period": "isam-bolana",
+      "features": [
+        "Fandeha tsy voafetra",
+        "Voasarona ny fitahirizana",
+        "Sarin-tany tena fotoana",
+        "Fampandrenesana avo lenta",
+        "Statistika antsipirihany",
+        "Dia voafaritra"
+      ]
+    },
+    
+    "premium": {
+      "name": "Premium",
+      "price": "100000",
+      "period": "isam-taona",
+      "features": [
+        "Ny zava-drehetra ao amin'ny Pro",
+        "Laharam-pahamehana amin'ny fandeha",
+        "Fiofanana maimaim-poana",
+        "Fiantohana tafiditra"
+      ]
+    }
+  },
+  
+  "features": {
+    "unlimited": "Fandeha tsy voafetra",
+    "support": "Fanohanana 24/7",
+    "map": "Sarin-tany tena fotoana",
+    "stats": "Statistika",
+    "priority": "Laharam-pahamehana",
+    "training": "Fiofanana",
+    "insurance": "Fiantohana",
+    "badge": "Badge Premium",
+    "commission": "Kaomisy mihena"
+  },
+  
+  "validation": {
+    "termsRequired": "Tsy maintsy manaiky ny fepetra ianao.",
+    "cardNumberInvalid": "Nomeraon-kara tsy mety (karaky 16 isa)",
+    "cardExpiryInvalid": "Daty fara-mandimby tsy mety (MM/TT karaky)",
+    "cardCVCInvalid": "CVC tsy mety (3 isa karaky)",
+    "cardNameInvalid": "Anaran'ny tompon-kara ilaina (farafahakeliny 3 litera)",
+    "operatorRequired": "Mila mpandraharaha",
+    "phoneInvalid": "Laharana finday tsy mety"
+  },
+  
+  "configuration": {
+    "title": "Fametrahana drafitra",
+    "duration": "Faharetana",
+    "selectYears": "Fidio ny taona",
+    "selectMonths": "Fidio ny volana",
+    "period": "Fotoana",
+    "start": "Manomboka",
+    "end": "Mamarana",
+    "paymentDetails": "Antsipirian'ny fandoavana",
+    "price": "Vidiny",
+    "annual": "isan-taona",
+    "monthly": "isan-bolana",
+    "durationLabel": "Fotoana",
+    "total": "Totaly"
+  },
+
+  "payment": {
+    "title": "Fomba fandoavana",
+    "cardNumber": "Nomeraon-kara",
+    "cardExpiry": "Daty lany",
+    "cardCVC": "CVC",
+    "cardholderName": "Anaran'ny tompon-kara",
+    "cardholderPlaceholder": "Anarana eo amin'ny kara",
+    "payNow": "Mandoa izao",
+    "processing": "Fanodinana...",
+    "backToDashboard": "Miverina amin'ny dashboard",
+    "securePayment": "Fandoavam-bola azo antoka SSL",
+    "methods": {
+      "card": "Kara",
+      "mobile": "Mobile Money"
+    },
+    "terms": "Amin'ny fanandriamana, manaiky ny Fepetran'ny Tohidrano sy ny Politika fiainana manokana ianao.",
+    "annual": "isan-taona",
+    "monthly": "isan-bolana",
+    "operator": "Mpandraharaha",
+    "selectOperator": "Fidio ny mpandraharaha",
+    "phoneNumber": "Nomeraon-telefaona",
+    "phonePlaceholder": "07 000 000 00",
+    "phoneHint": "Nomeraonao Mobile Money",
+    "conditions": "Fepetra fampiasana",
+    "and": "ary",
+    "privacy": "Politika fiainana manokana",
+    "selectedPlan": "Drafitra voafantina",
+    "duration": "Faharetana",
+    "period": "Fotoana",
+    "to": "hatramin'ny",
+    "totalAmount": "Totaly",
+    "pendingNotice": "Miandry ny fanamafisana ny fandoavanao.",
+    "confirmation": "Azafady hamafiso ny fampahalalana alohan'ny handoavana."
+  },
+
+  "loading": {
+    "plans": "Entana ny drafitra...",
+    "driverInfo": "Entana ny fampahalalana mpamily..."
+  },
+
+  "pending": {
+    "waitingForActivation": "Voaray ny fangatahanao. Kaody fanamarinana: ",
+    "title": "Fanamafisana eo am-panaovana",
+    "redirecting": "Miverina amin'ny dashboard..."
+  },
+
+  "success": {
+    "title": "Vita ny fandoavana!",
+    "message": "Mavitrika ny famandrihanao. Miverina amin'ny dashboard...",
+    "goToDashboard": "Hiditra amin'ny dashboard"
+  },
+
+  "errors": {
+    "driverInfoMissing": "Tsy ampy ny fampahalalana mpamily.",
+    "authTokenMissing": "Tsy hita ny token fampiasana.",
+    "paymentError": "Nisy hadisoana tamin'ny fandoavana.",
+    "corsError": "Hadisoana tambajotra na CORS. Zahao ny fikirakirana mpizara.",
+    "title": "Hadisoana fandoavana",
+    "close": "Hidio"
+  },
+
+  "driver": {
+    "defaultName": "Mpamily"
+  },
+
+  "dur": {
+    "duration": {
+      "1year": "1 taona",
+      "2years": "2 taona",
+      "3years": "3 taona",
+      "1month": "1 volana",
+      "3months": "3 volana",
+      "6months": "6 volana",
+      "12months": "12 volana"
+    }
+  },
+
+  "form": {
+    "searchCountry": "Hikaroka firenena...",
+    "noResults": "Tsy misy vokatra",
+    "format": "Endrika",
+    "fullNumber": "Nomerao feno"
+  }
+}

@@ -1,0 +1,327 @@
+.subscription-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.subscription-loading .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Modal de blocage - MODIFIÉ */
+.subscription-block-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Réduit l'opacité pour voir l'app en arrière-plan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.block-modal-content {
+    background: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px; /* Réduit la largeur max */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+    overflow: hidden; /* Empêche le scroll dans le popup */
+    position: relative;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.block-modal-header {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    color: white;
+    padding: 25px 30px;
+    text-align: center;
+}
+
+.block-modal-header .block-icon {
+    font-size: 50px; /* Réduit légèrement */
+    margin-bottom: 15px;
+}
+
+.block-modal-header h2 {
+    margin: 0;
+    font-size: 24px; /* Réduit légèrement */
+    font-weight: 700;
+}
+
+.block-modal-body {
+    padding: 30px;
+    max-height: 70vh; /* Limite la hauteur */
+    overflow-y: auto; /* Scroll uniquement si nécessaire */
+}
+
+.expired-message,
+.trial-used-message,
+.no-subscription-message {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f8f9fa;
+}
+
+.expired-message {
+    background: #fff3cd;
+    border-left: 5px solid #ffc107;
+}
+
+.trial-used-message {
+    background: #d4edda;
+    border-left: 5px solid #28a745;
+}
+
+.no-subscription-message {
+    background: #d1ecf1;
+    border-left: 5px solid #17a2b8;
+}
+
+.expired-message .expired-icon,
+.trial-used-message .trial-icon,
+.no-subscription-message .subscribe-icon {
+    font-size: 40px; /* Réduit */
+    margin-bottom: 12px;
+    color: #666;
+}
+
+.expired-message h3,
+.trial-used-message h3,
+.no-subscription-message h3 {
+    margin: 8px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.expired-message p,
+.trial-used-message p,
+.no-subscription-message p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.subscription-info {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 14px;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item span {
+    color: #666;
+}
+
+.info-item strong {
+    color: #333;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.action-buttons button {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    margin-top: -50px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+    background: #f8f9fa;
+    color: #495057;
+    border: 2px solid #dee2e6 !important;
+}
+
+.btn-secondary:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.contact-support {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+    color: #666;
+    font-size: 13px;
+}
+
+.contact-support p {
+    margin: 0 0 8px 0;
+}
+
+.contact-support a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-support a:hover {
+    text-decoration: underline;
+}
+
+.contact-support .phone {
+    margin-left: 8px;
+    color: #666;
+}
+
+/* Style pour l'application en arrière-plan */
+.blocked-content {
+    position: relative;
+    min-height: 100vh;
+}
+
+.blocked-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Arrière-plan semi-transparent */
+    backdrop-filter: blur(3px); /* Léger flou pour l'arrière-plan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.blocked-message {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10000;
+}
+
+.blocked-message svg {
+    font-size: 40px;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.blocked-message h3 {
+    color: #333;
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.blocked-message p {
+    color: #666;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Pour garantir que l'app soit visible en arrière-plan */
+body.blocked {
+    overflow: hidden; /* Empêche le scroll du body */
+}
+
+body.blocked main {
+    filter: blur(2px); /* Léger flou sur le contenu principal */
+    pointer-events: none; /* Désactive les interactions */
+}
+
+/* Media queries pour responsivité */
+@media (max-width: 768px) {
+    .block-modal-content {
+        width: 95%;
+        max-width: 95%;
+        margin: 10px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .block-modal-header {
+        padding: 20px;
+    }
+    
+    .block-modal-body {
+        padding: 20px;
+    }
+    
+    .expired-message,
+    .trial-used-message,
+    .no-subscription-message {
+        padding: 15px;
+    }
+}
+
+/* Animation pour fermer le modal */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.subscription-block-modal.closing {
+    animation: fadeOut 0.3s ease forwards;
+}

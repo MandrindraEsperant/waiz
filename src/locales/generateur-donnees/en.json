@@ -1,0 +1,47 @@
+{
+  "generateur": {
+    "title": "Calendar",
+    "subtitle": "Upcoming events and notes management",
+    "stats": {
+      "totalNotes": "Total notes",
+      "todayNotes": "Today's notes",
+      "weekEvents": "Events this week"
+    },
+    "calendar": {
+      "title": "Events Calendar",
+      "today": "Today",
+      "days": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      "months": [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ]
+    },
+    "notes": {
+      "title": "Notes for",
+      "addPlaceholder": "Add a note for this date...",
+      "addButton": "Add note",
+      "noNotes": "No notes for this date",
+      "firstNote": "Add your first note above",
+      "selectDate": "Select a date in the calendar to add notes",
+      "clickToStart": "Click on a calendar day to start",
+      "notesCount": "note(s)",
+      "created": "Created on",
+      "modified": "Modified on",
+      "save": "Save",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "events": {
+      "upcoming": "Upcoming events this week",
+      "today": "TODAY",
+      "tomorrow": "TOMORROW",
+      "days": "DAYS",
+      "noEvents": "No upcoming events"
+    },
+    "loading": "Loading notes...",
+    "saved": "note(s) saved",
+    "upcomingEvents": "upcoming event(s)",
+    "clearAll": "Delete all notes"
+  }
+}

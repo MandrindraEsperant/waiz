@@ -1,0 +1,655 @@
+/* Menu.css - Version sans scroll avec dimensions inchangées */
+
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background: linear-gradient(180deg, #052e16 0%, #14532d 100%);
+  color: white;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* CHANGÉ : overflow-x hidden → overflow hidden */
+  transition: width 0.3s ease;
+}
+
+.dark-mode .sidebar-menu {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar-closed {
+  width: 70px !important;
+}
+
+/* ===== CORRECTION : EMPÊCHER L'AGRANDISSEMENT AUTOMATIQUE ===== */
+.sidebar-menu.sidebar-closed {
+  width: 70px !important;
+}
+
+/* Désactiver complètement l'agrandissement au survol */
+.sidebar-menu.sidebar-closed:hover {
+  width: 70px !important;
+}
+
+/* Header compact */
+.sidebar-header {
+  padding: 20px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  transition: border-color 0.3s ease;
+  flex-shrink: 0; /* AJOUTÉ : Empêche le header de rétrécir */
+}
+
+.dark-mode .sidebar-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0; /* AJOUTÉ */
+}
+
+.dark-mode .logo-icon {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.logo-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.logo-subtitle {
+  font-size: 10px;
+  opacity: 0.8;
+  margin-top: 1px;
+  transition: opacity 0.3s ease;
+}
+
+.dark-mode .logo-subtitle {
+  opacity: 0.7;
+}
+
+.sidebar-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0; /* AJOUTÉ */
+}
+
+.dark-mode .sidebar-toggle {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Structure principale */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px); /* AJOUTÉ : Hauteur = viewport - hauteur header */
+  flex: 1;
+  overflow: hidden; /* AJOUTÉ : Empêche le débordement */
+}
+
+/* Navigation - MODIFIÉ pour éviter le scroll */
+.sidebar-nav {
+  flex: 1;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow-y: auto; /* Gardé mais avec une barre stylisée */
+  margin-bottom: 10px;
+  
+  /* Style de la scrollbar plus discret */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* Style de la scrollbar pour Chrome/Safari */
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Mode sombre pour la scrollbar */
+.dark-mode .sidebar-nav::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.03);
+  margin-bottom: 4px;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dark-mode .nav-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== STYLES POUR MENU FERMÉ ===== */
+.sidebar-closed .nav-item {
+  padding: 12px;
+  justify-content: center;
+}
+
+/* Hover pour menu OUVERT */
+.sidebar-menu:not(.sidebar-closed) .nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(3px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .sidebar-menu:not(.sidebar-closed) .nav-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== HOVER POUR MENU FERMÉ - SANS AGRANDISSEMENT ===== */
+.sidebar-closed .nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .sidebar-closed .nav-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Tooltips pour navigation dans menu fermé */
+.sidebar-closed .nav-item:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-left: 10px;
+  z-index: 1001;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: tooltipFadeIn 0.2s ease;
+}
+
+.dark-mode .sidebar-closed .nav-item:hover::after {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1e293b;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+.nav-item-active {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #166534 !important;
+  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.3);
+  border-color: #166534 !important;
+}
+
+.dark-mode .nav-item-active {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #166534 !important;
+  box-shadow: 0 2px 12px rgba(22, 101, 52, 0.4);
+}
+
+.nav-icon-container {
+  position: relative;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-closed .nav-icon-container {
+  min-width: auto;
+}
+
+.nav-icon {
+  font-size: 18px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode .nav-icon {
+  color: #cbd5e1;
+}
+
+.nav-item-active .nav-icon {
+  color: #166534 !important;
+}
+
+.nav-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ef4444;
+  color: white;
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  min-width: 16px;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .nav-badge {
+  background: #dc2626;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.nav-content {
+  flex: 1;
+  margin-left: 15px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-closed .nav-content {
+  display: none;
+}
+
+.nav-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .nav-title {
+  color: #e2e8f0;
+}
+
+.nav-description {
+  font-size: 11px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .nav-description {
+  opacity: 0.7;
+  color: #cbd5e1;
+}
+
+.active-arrow {
+  color: #166534;
+  transition: transform 0.3s ease;
+}
+
+/* Liens désactivés */
+.nav-link.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.nav-link.disabled .nav-item:hover {
+  transform: none !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* ===== TRANSITION GÉNÉRALE ===== */
+.sidebar-menu * {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .sidebar-menu {
+    width: 70px;
+  }
+  
+  .sidebar-menu:not(.sidebar-closed) {
+    width: 250px;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav-content {
+    display: none;
+  }
+  
+  .sidebar-menu:not(.sidebar-closed) .nav-content {
+    display: block;
+  }
+  
+  .logo-text-container {
+    display: none;
+  }
+  
+  .sidebar-menu:not(.sidebar-closed) .logo-text-container {
+    display: flex;
+  }
+  
+  /* Désactiver les tooltips sur mobile */
+  .sidebar-closed .nav-item:hover::after {
+    display: none;
+  }
+}
+
+/* Amélioration de l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-menu * {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .sidebar-closed .nav-item:hover::after {
+    animation: none;
+  }
+}
+
+/* Support pour les navigateurs qui préfèrent le contraste élevé */
+@media (prefers-contrast: high) {
+  .sidebar-menu {
+    border-right: 2px solid white;
+  }
+  
+  .nav-item-active {
+    border: 2px solid #166534;
+  }
+  
+  .dark-mode .sidebar-menu {
+    border-right: 2px solid #e2e8f0;
+  }
+  
+  .sidebar-closed .nav-item:hover::after {
+    border: 2px solid white;
+    background: black;
+    color: white;
+  }
+}
+
+/* SECTION PARAMÈTRE - MODIFIÉ */
+.parametre-section {
+  margin-top: auto;
+  border-top: 1px solid var(--border-color, #e0e0e0);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex-shrink: 0; /* AJOUTÉ : Empêche la section de rétrécir */
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05)); /* AJOUTÉ */
+}
+
+.parametre-section .nav-item {
+  background-color: var(--parametre-bg, rgba(255, 255, 255, 0.03));
+  border-left: 3px solid var(--parametre-color, #6c757d);
+}
+
+.dark-mode .parametre-section .nav-item {
+  background-color: var(--parametre-bg, rgba(255, 255, 255, 0.05));
+  border-left: 3px solid var(--parametre-color, #6c757d);
+}
+
+.parametre-section .nav-item:hover {
+  background-color: var(--parametre-hover-bg, #e9ecef);
+}
+
+.parametre-section .nav-item-active {
+  background-color: var(--parametre-active-bg, #e3f2fd);
+  border-left-color: var(--primary-color, #2196f3);
+}
+
+/* Styles pour les sous-menus */
+.nav-item.has-submenu {
+  cursor: pointer;
+}
+
+.nav-item.has-submenu .nav-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.submenu-arrow {
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.nav-item:hover .submenu-arrow {
+  opacity: 1;
+}
+
+/* Container du sous-menu */
+.submenu-container {
+  margin-left: 32px;
+  padding-left: 8px;
+  border-left: 1px dashed var(--border-color, #e2e8f0);
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Liens du sous-menu */
+.submenu-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  margin: 4px 0;
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.submenu-item:hover {
+  background-color: var(--hover-color, rgba(0, 0, 0, 0.05));
+}
+
+.submenu-item-active {
+  background-color: var(--active-color, rgba(33, 150, 243, 0.1));
+  color: var(--primary-color, #2196f3);
+}
+
+.submenu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.submenu-item-active .submenu-icon {
+  opacity: 1;
+  color: var(--primary-color, #2196f3);
+}
+
+.submenu-content {
+  flex: 1;
+}
+
+.submenu-title {
+  font-weight: 500;
+  margin-bottom: 2px;
+  font-size: 0.9rem;
+}
+
+.submenu-description {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  line-height: 1.2;
+}
+
+/* Ajustements pour le mode fermé */
+.sidebar-closed .submenu-container {
+  margin-left: 0;
+  border-left: none;
+  position: relative;
+}
+
+.sidebar-closed .submenu-item {
+  padding: 8px;
+  justify-content: center;
+}
+
+.sidebar-closed .submenu-icon {
+  margin-right: 0;
+}
+
+/* Tooltips pour les sous-menus en mode fermé */
+.sidebar-closed .submenu-item[data-tooltip] {
+  position: relative;
+}
+
+.sidebar-closed .submenu-item[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  margin-left: 8px;
+}
+
+/* Badge pour les notifications éventuelles */
+.nav-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #f44336;
+  color: white;
+  font-size: 0.6rem;
+  padding: 2px 4px;
+  border-radius: 10px;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* Animation pour la flèche active */
+.active-arrow {
+  margin-left: 4px;
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Supprimer la media query qui causait le scroll */
+@media (max-height: 600px) {
+  .sidebar-nav {
+    overflow-y: auto;
+    /* max-height: calc(100vh - 200px); SUPPRIMÉ */
+  }
+}

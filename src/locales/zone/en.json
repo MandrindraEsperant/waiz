@@ -1,0 +1,54 @@
+{
+  "pageTitle": "VTC Service Zones Management",
+  "newZone": "New Zone",
+  "refresh": "Refresh",
+  
+  "zoneCreated": "Zone created successfully!",
+  "zoneUpdated": "Zone updated successfully!",
+  "zoneDeleted": "Zone deleted successfully!",
+  "zoneReady": "Zone \"{{nom}}\" ready to be created!",
+  
+  "searchPlaceholder": "Search zone by name or ID...",
+  "clearSearch": "Clear",
+  "searchResults": "{{count}} zone{{s}} found for \"{{term}}\"",
+  "noResults": "No zones found for \"{{term}}\"",
+  "totalZones": "Total",
+  "filteredZones": "Filtered",
+  
+  "addZone": "Add Zone",
+  "editZone": "Edit Zone",
+  "zoneName": "Zone name",
+  "zoneNamePlaceholder": "Enter zone name",
+  "selectedPosition": "Selected position",
+  "latitude": "Latitude",
+  "longitude": "Longitude",
+  "cancel": "Cancel",
+  "save": "Save",
+  "saving": "Saving...",
+  
+  "availableZones": "Available Zones",
+  "zones": "zones",
+  "active": "Active",
+  "noZones": "No zones found",
+  "noSearchResults": "No zones match your search",
+  "clearSearchBtn": "Clear search",
+  
+  "deleteZone": "Delete zone",
+  "deleteConfirmation": "Are you sure you want to delete this zone?",
+  "deleteWarning": "This action is irreversible.",
+  "heatmapWarning": "⚠️ This zone will also be removed from the dashboard heatmap.",
+  "delete": "Delete",
+  "deleting": "Deleting...",
+  
+  "loadingZones": "Loading zones...",
+  "loading": "Loading...",
+  "errorLoadingZones": "Error loading zones",
+  "errorSavingZone": "Error saving zone",
+  "errorDeletingZone": "Error deleting zone",
+  
+  "zoneFromDashboard": "📍 Zone received from Dashboard",
+  "instruction": "The zone is pre-selected on the map. Click on \"Add Zone\" to confirm it.",
+  
+  "validationNameRequired": "Please enter a zone name and select a location",
+  "newPosition": "New Position"
+}

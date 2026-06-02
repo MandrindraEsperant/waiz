@@ -1,0 +1,45 @@
+{
+  "export": {
+    "title": "EXPORT DES COURSES",
+    "backButton": "← Retour aux courses",
+    "period": {
+      "title": "Période d'export",
+      "all": "Toutes les courses",
+      "range": "Par période",
+      "startDate": "Date de début :",
+      "endDate": "Date de fin :"
+    },
+    "format": {
+      "title": "Format d'export",
+      "fileType": "Destination du fichier :",
+      "csv": "Fichier CSV (.csv)",
+      "excel": "Fichier Excel (.xlsx)",
+      "pdf": "Document PDF (.pdf)"
+    },
+    "exportButton": "Exporter les courses",
+    "exporting": "Export en cours...",
+    "summary": {
+      "title": "Résumé de l'export",
+      "period": "Période sélectionnée:",
+      "allPeriod": "Toutes les courses",
+      "format": "Format:",
+      "availableRides": "Courses disponibles:",
+      "ridesInPeriod": "Courses dans la période:",
+      "ridesCount": "course(s)"
+    },
+    "alerts": {
+      "noData": "Aucune donnée à exporter pour la période sélectionnée",
+      "dateRequired": "Veuillez sélectionner les deux dates pour la période.",
+      "invalidDate": "La date de début ne peut pas être après la date de fin.",
+      "loadError": "Erreur lors du chargement des courses",
+      "exportError": "Erreur lors de l'export",
+      "success": "Export {{format}} réussi ! {{count}} course(s) exportée(s)."
+    },
+    "pdf": {
+      "title": "Export des Courses",
+      "period": "Période:",
+      "rideCount": "Nombre de courses:",
+      "exportDate": "Date d'export:"
+    }
+  }
+}

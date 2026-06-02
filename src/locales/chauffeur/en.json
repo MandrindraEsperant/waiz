@@ -1,0 +1,85 @@
+{
+  "pageTitle": "New Driver Registration",
+  "back": "Back",
+  "cancel": "Cancel",
+  "register": "Register",
+  "saving": "Saving...",
+  
+  "driverInfo": "Driver Information to Fill",
+  "fullName": "Full Name *",
+  "fullNamePlaceholder": "Ex: Charles",
+  "email": "Email *",
+  "emailPlaceholder": "Enter your email",
+  "password": "Password *",
+  "passwordPlaceholder": "Enter your password",
+  "phone": "Phone *",
+  "phonePlaceholder": "Ex: 0341234567",
+  
+  "driverType": {
+    "label": "Driver Type",
+    "individual": "Individual",
+    "individualDesc": "Personal car",
+    "professional": "Professional",
+    "professionalDesc": "Licensed taxi/VTC",
+    "company": "Company",
+    "companyDesc": "Corporate fleet"
+  },
+  
+  "form": {
+    "searchCountry": "Search country...",
+    "noResults": "No results found",
+    "format": "Format",
+    "fullNumber": "Full number"
+  },
+  
+  "validation": {
+    "nameRequired": "Name is required",
+    "nameMinLength": "Name must contain at least 2 characters",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email address",
+    "passwordRequired": "Password is required",
+    "passwordMinLength": "Password must contain at least 4 characters",
+    "phoneRequired": "Phone number is required",
+    "phoneMinLength": "Number must contain at least 8 digits",
+    "phoneDigitsOnly": "Number must contain only digits",
+    "driverTypeRequired": "Please select a driver type"
+  },
+  
+  "hints": {
+    "passwordHint": "Minimum 4 characters",
+    "phoneHint": "Format: 10 digits without spaces"
+  },
+  
+  "success": {
+    "driverRegistered": "Driver registered successfully!"
+  },
+  
+  "errors": {
+    "registrationError": "Error registering driver",
+    "invalidData": "Invalid data",
+    "emailExists": "A driver with this email already exists",
+    "serverError": "Server error. Please try again later.",
+    "networkError": "Unable to contact server. Check your connection.",
+    "configError": "Configuration error"
+  },
+  
+  "features": {
+    "joinTeam": "Join our driver team",
+    "becomePartner": "Become an Waiz partner and grow your business",
+    "flexibility": "Schedule flexibility",
+    "flexibilityDesc": "Work when you want",
+    "income": "Attractive income",
+    "incomeDesc": "Earn based on your performance",
+    "security": "Guaranteed security",
+    "securityDesc": "Secure work environment"
+  },
+  
+  "help": {
+    "title": "💡 Important Information",
+    "requiredFields": "All fields marked with * are required",
+    "nameRequirement": "Name must contain at least 2 characters",
+    "passwordRequirement": "Password must contain at least 4 characters",
+    "emailRequirement": "Email must be valid",
+    "phoneRequirement": "Phone must contain exactly 10 digits"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "header": {
+    "title": "VTC Dashboard - Vinavina Marani-tsaina",
+    "subtitle": "Hidira raha te hiditra amin'ny toerana misy anao"
+  },
+  "form": {
+    "title": "FIDIRANA",
+    "subtitle": "Ampidiro ny kaontinao VTC",
+    "emailLabel": "Mailaka:",
+    "emailPlaceholder": "Ampidiro ny mailakao",
+    "passwordLabel": "Tenimiafina:",
+    "passwordPlaceholder": "Ampidiro ny tenimiafinao"
+  },
+  "buttons": {
+    "login": "Hiditra",
+    "loggingIn": "Fidirana..."
+  },
+  "links": {
+    "forgotPassword": "Hadino ny tenimiafina?",
+    "register": "Tsy manana kaonty mbola? Hisoratra anarana"
+  },
+  "footer": {
+    "copyright": "Platform VTC - Vinavina Marani-tsaina &copy; 2025"
+  },
+  "validation": {
+    "requiredFields": "Fenoy ny bokotra rehetra azafady.",
+    "invalidEmail": "Ampidiro adiresy mailaka mety azafady.",
+    "passwordMinLength": "Tokony ho 4 farafahakeliny ny halavan'ny tenimiafina."
+  },
+  "errors": {
+    "loginFailed": "Tsy nahomby ny fidirana",
+    "timeout": "Lany daty ny fifandraisana. Andramo indray azafady.",
+    "serverError": "Hadisoana amin'ny mpampiasa",
+    "networkError": "Tsy afaka mifandray amin'ny mpampiasa. Jereo ny fifandraisanao.",
+    "unexpectedError": "Nisy hadisoana tsy nampoizina nitranga."
+  },
+  "forgotPassword": {
+    "message": "Tokony hatao ny fitaovana famerenana tenimiafina"
+  }
+}

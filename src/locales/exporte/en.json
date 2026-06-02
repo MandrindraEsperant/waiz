@@ -1,0 +1,47 @@
+{
+  "export": {
+    "title": "RIDES EXPORT",
+    "backButton": "← Back to rides",
+    "period": {
+      "title": "Export Period",
+      "all": "All rides",
+      "range": "By period",
+      "startDate": "Start date:",
+      "endDate": "End date:"
+    },
+    "format": {
+      "title": "Export Format",
+      "fileType": "File destination:",
+      "csv": "CSV File (.csv)",
+      "excel": "Excel File (.xlsx)",
+      "pdf": "PDF Document (.pdf)"
+    },
+    "exportButton": "Export rides",
+    "exporting": "Exporting...",
+    "summary": {
+      "title": "Export Summary",
+      "period": "Selected period:",
+      "allPeriod": "All rides",
+      "format": "Format:",
+      "availableRides": "Available rides:",
+      "ridesInPeriod": "Rides in period:",
+      "ridesCount": "ride(s)",
+      "user": "Utilisateur"
+    },
+    "alerts": {
+      "noData": "No data to export for the selected period",
+      "dateRequired": "Please select both dates for the period.",
+      "invalidDate": "Start date cannot be after end date.",
+      "loadError": "Error loading rides",
+      "exportError": "Error during export",
+      "success": "{{format}} export successful! {{count}} ride(s) exported."
+    },
+    "pdf": {
+      "title": "Rides Export",
+      "period": "Period:",
+      "rideCount": "Number of rides:",
+      "exportDate": "Export date:",
+      "user": "Exporté par"
+    }
+  }
+}

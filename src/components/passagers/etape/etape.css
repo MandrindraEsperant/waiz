@@ -1,0 +1,1936 @@
+/* etape.css - Version corrigée avec les bonnes classes pour Etape.js */
+
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --accent-color: #f72585;
+    --success-color: #4cc9f0;
+    --dark-color: #1e1e2f;
+    --gray-color: #6c757d;
+    --light-gray: #e9ecef;
+    --white-color: #ffffff;
+    --gradient-primary: linear-gradient(135deg, #4361ee, #3a0ca3);
+    --gradient-accent: linear-gradient(135deg, #f72585, #b5179e);
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --border-radius: 20px;
+    --border-radius-sm: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f5f7fb;
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+/* ========== LAYOUT PRINCIPAL ========== */
+.etape-container {
+    min-height: 100vh;
+    background: #f5f7fb;
+    display: flex;
+}
+
+/* ========== HEADER PRINCIPAL ========== */
+.etape-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white-color);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-icon {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: rgb(90, 113, 241);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.logo-sub {
+    font-size: 0.7rem;
+    color: var(--gray-color);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: blue;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-login {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-login:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-signup {
+    background: var(--gradient-primary);
+    border: none;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-signup:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ========== HEADER MOBILE ========== */
+.etape-header-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1001;
+    padding: 1rem;
+}
+
+.etape-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.etape-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.etape-logo-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.etape-logo-text {
+    font-weight: 700;
+    font-size: 1.2rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.etape-mobile-menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.etape-mobile-menu-btn:hover {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+}
+
+.etape-mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    backdrop-filter: blur(5px);
+}
+
+/* ========== SIDEBAR GAUCHE ========== */
+.etape-sidebar {
+    width: 320px;
+    background: white;
+    box-shadow: 2px 0 20px rgba(0,0,0,0.05);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.etape-sidebar-header {
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.etape-sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.etape-sidebar-logo-icon {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.etape-sidebar-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.etape-sidebar-logo-main {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.etape-sidebar-logo-sub {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+}
+
+.etape-sidebar-progress {
+    flex: 1;
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+}
+
+.etape-progress-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.etape-progress-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.etape-progress-item:hover {
+    background: rgba(67, 97, 238, 0.05);
+}
+
+.etape-progress-item.active {
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(67, 97, 238, 0.05));
+    border-left: 3px solid var(--primary-color);
+}
+
+.etape-progress-item.completed .etape-progress-title {
+    color: var(--primary-color);
+}
+
+.etape-progress-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.etape-marker-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    transition: all 0.3s ease;
+    z-index: 2;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.etape-marker-line {
+    width: 3px;
+    height: 40px;
+    background: #e0e0e0;
+    margin: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.etape-marker-line.active {
+    background: var(--gradient-primary);
+}
+
+.etape-progress-content {
+    flex: 1;
+    padding-top: 0.3rem;
+}
+
+.etape-progress-title {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+}
+
+.etape-progress-subtitle {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--gray-color);
+}
+
+.etape-sidebar-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--light-gray);
+}
+
+.etape-direction-info {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.etape-direction-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background: #f8fafd;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gray-color);
+    transition: all 0.3s ease;
+}
+
+.etape-direction-badge.active {
+    background: var(--gradient-primary);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.etape-direction-badge svg {
+    font-size: 1rem;
+}
+
+/* ========== CONTENU PRINCIPAL ========== */
+.etape-main-content {
+    flex: 1;
+    margin-left: 320px;
+    min-height: 100vh;
+    padding: 2rem;
+    padding-top: 5rem;
+}
+
+/* ========== HERO SECTION ========== */
+.etape-hero-mini {
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: var(--border-radius);
+    padding: 3rem 2rem;
+    color: white;
+    box-shadow: var(--shadow-lg);
+}
+
+.etape-hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.etape-hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.etape-direction-indicator-hero {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.direction-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ========== STEPS PROGRESS ========== */
+.steps-progress {
+    padding: 40px 0 40px;
+    background: white;
+    position: relative;
+    z-index: 5;
+}
+
+.progress-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.step-indicator {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 3;
+    box-shadow: var(--shadow-sm);
+}
+
+.progress-step.active .step-indicator {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(67, 97, 238, 0.4);
+}
+
+.progress-step.current .step-indicator {
+    animation: pulse 1.5s infinite;
+}
+
+.step-label {
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--gray-color);
+    transition: color 0.3s ease;
+    max-width: 150px;
+}
+
+.progress-step.active .step-label {
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+.step-connector {
+    position: absolute;
+    top: 35px;
+    right: -50%;
+    width: 100%;
+    height: 3px;
+    background: #e0e0e0;
+    z-index: 1;
+}
+
+.step-connector.active {
+    background: var(--gradient-primary);
+}
+
+/* ========== ANIMATION SECTION ========== */
+.etape-animation-section {
+    padding: 40px 0 80px;
+    background: white;
+    position: relative;
+    z-index: 5;
+}
+
+.etape-animation-container {
+    min-height: 700px;
+    position: relative;
+    background: #f8fafd;
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+/* Animation direction indicator */
+.etape-direction-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 50px;
+    box-shadow: var(--shadow-sm);
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.etape-direction-arrow {
+    font-size: 2rem;
+    color: var(--gray-color);
+    transition: all 0.3s ease;
+}
+
+.etape-direction-arrow.pulse-down {
+    color: var(--primary-color);
+    animation: bounceDown 1s infinite ease-in-out;
+}
+
+.etape-direction-arrow.pulse-up {
+    color: var(--accent-color);
+    animation: bounceUp 1s infinite ease-in-out;
+}
+
+.etape-direction-line {
+    width: 4px;
+    height: 60px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.etape-direction-fill {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    transition: height 0.5s ease;
+}
+
+.etape-direction-fill.filling-down {
+    height: 100%;
+    top: 0;
+    animation: fillDown 2.5s ease-in-out;
+}
+
+.etape-direction-fill.filling-up {
+    height: 100%;
+    bottom: 0;
+    animation: fillUp 2.5s ease-in-out;
+}
+
+.etape-animation-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.etape-animation-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideVertical 0.5s ease forwards;
+}
+
+.etape-step-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.etape-step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: currentColor;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.etape-step-description {
+    color: var(--gray-color);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    max-width: 800px;
+}
+
+/* ========== ÉTAPE 1 - CHAUFFEURS ========== */
+.etape-chauffeurs-demo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.etape-chauffeur-card {
+    background: white;
+    border-radius: var(--border-radius-sm);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    animation: slideUp 0.5s ease forwards;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.etape-chauffeur-card.selected {
+    border-color: var(--primary-color);
+    background: #f0f4ff;
+    position: relative;
+}
+
+.etape-chauffeur-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.etape-chauffeur-header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: var(--shadow-sm);
+}
+
+.etape-chauffeur-info h4 {
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.etape-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #ffc107;
+    font-size: 0.9rem;
+}
+
+.etape-rating span {
+    color: var(--gray-color);
+}
+
+.etape-star {
+    color: #ffc107;
+}
+
+.etape-chauffeur-details {
+    margin-bottom: 1rem;
+}
+
+.etape-chauffeur-details p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.etape-chauffeur-price {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--light-gray);
+}
+
+.etape-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.etape-per-person {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    margin-left: 0.2rem;
+}
+
+.etape-select-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.etape-select-btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.02);
+}
+
+/* ========== ÉTAPE 2 - LIEUX ========== */
+.etape-lieux-demo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.etape-map-container {
+    position: relative;
+    height: 100%;
+}
+
+.etape-map-placeholder {
+    height: 350px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: var(--border-radius);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.etape-map-point {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    animation: bounce 2s infinite ease-in-out;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.etape-map-point svg {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.etape-map-point span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: rgba(0,0,0,0.5);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    margin-top: 0.2rem;
+}
+
+.depart-point {
+    top: 20%;
+    left: 20%;
+}
+
+.arrivee-point {
+    bottom: 20%;
+    right: 20%;
+    animation-delay: 1s;
+}
+
+.etape-route-line {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-50%);
+    border-radius: 2px;
+}
+
+.etape-route-line::before,
+.etape-route-line::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+.etape-route-line::before {
+    left: 0;
+}
+
+.etape-route-line::after {
+    right: 0;
+}
+
+.etape-pulse-point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 20px white;
+}
+
+.point-1 {
+    top: 40%;
+    left: 40%;
+}
+
+.point-2 {
+    top: 60%;
+    left: 50%;
+    animation-delay: 0.5s;
+}
+
+.point-3 {
+    top: 30%;
+    left: 60%;
+    animation-delay: 1s;
+}
+
+.etape-lieux-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.etape-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.etape-form-group.depart-group label svg {
+    color: #4CAF50;
+}
+
+.etape-form-group.arrivee-group label svg {
+    color: var(--accent-color);
+}
+
+.etape-input-suggestion {
+    position: relative;
+}
+
+.etape-input-suggestion input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--light-gray);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.etape-suggestion-badge {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--light-gray);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    font-weight: 500;
+}
+
+.etape-map-preview {
+    margin-top: 1rem;
+}
+
+.etape-trajet-summary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--light-gray);
+}
+
+.etape-ville {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.etape-arrow {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.etape-distance {
+    margin-left: auto;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    background: var(--light-gray);
+    padding: 0.2rem 0.8rem;
+    border-radius: 50px;
+}
+
+/* ========== ÉTAPE 3 - DATES ========== */
+.etape-dates-demo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.etape-calendar-preview {
+    background: white;
+    border-radius: var(--border-radius-sm);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--light-gray);
+}
+
+.etape-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.etape-month-nav {
+    width: 35px;
+    height: 35px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--gray-color);
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.etape-month-nav:hover {
+    color: var(--primary-color);
+    background: rgba(67, 97, 238, 0.1);
+}
+
+.etape-calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 600;
+    color: var(--gray-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.etape-calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.3rem;
+}
+
+.etape-calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: default;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.etape-calendar-day.selected {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.etape-calendar-day.selected.retour {
+    background: var(--accent-color);
+}
+
+.etape-calendar-day.past {
+    color: var(--light-gray);
+}
+
+.etape-calendar-legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--light-gray);
+}
+
+.etape-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.etape-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.etape-dot.aller {
+    background: var(--primary-color);
+}
+
+.etape-dot.retour {
+    background: var(--accent-color);
+}
+
+.etape-time-selection {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--light-gray);
+}
+
+.etape-time-selection h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.etape-time-slots {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.etape-time-slot {
+    padding: 1rem;
+    background: white;
+    border: 2px solid var(--light-gray);
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.etape-time-slot:hover {
+    border-color: var(--primary-color);
+    background: rgba(67, 97, 238, 0.05);
+}
+
+.etape-time-slot.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* ========== ÉTAPE 4 - CONFIRMATION ========== */
+.etape-confirmation-demo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.etape-recap-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--light-gray);
+}
+
+.etape-recap-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.etape-success-icon {
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
+.etape-recap-header h3 {
+    font-size: 1.3rem;
+    color: var(--dark-color);
+}
+
+.etape-recap-section {
+    margin-bottom: 2rem;
+}
+
+.etape-recap-section h4 {
+    color: var(--gray-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.etape-recap-chauffeur {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8fafd;
+    border-radius: var(--border-radius-sm);
+}
+
+.etape-recap-chauffeur img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: var(--shadow-sm);
+}
+
+.etape-recap-chauffeur strong {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.etape-recap-trajet {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.etape-trajet-point {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.etape-point-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-top: 0.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.etape-point-dot.depart {
+    background: #4CAF50;
+}
+
+.etape-point-dot.arrivee {
+    background: var(--accent-color);
+}
+
+.etape-point-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    margin-bottom: 0.2rem;
+}
+
+.etape-point-value {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.etape-point-time {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    margin-top: 0.2rem;
+}
+
+.etape-recap-details {
+    background: #f8fafd;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-sm);
+}
+
+.etape-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.etape-detail-row:not(:last-child) {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.etape-detail-row.total {
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    border-top: 2px solid var(--light-gray);
+}
+
+.etape-total-price {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.etape-confirm-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--success-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.etape-confirm-btn:hover {
+    background: #3aa8d8;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.etape-success-animation {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.etape-checkmark-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #4CAF50;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.5s ease;
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+}
+
+.etape-checkmark {
+    width: 60px;
+    height: 30px;
+    border-left: 5px solid white;
+    border-bottom: 5px solid white;
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.etape-success-message {
+    color: #4CAF50;
+    font-size: 1.2rem;
+    font-weight: 600;
+    animation: fadeIn 0.5s ease 0.3s both;
+}
+
+/* ========== DEMO NOTE ========== */
+.etape-demo-note {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1.2rem 1.5rem;
+    background: rgba(67, 97, 238, 0.08);
+    border-radius: var(--border-radius-sm);
+    border-left: 4px solid var(--primary-color);
+}
+
+.etape-note-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.etape-demo-note p {
+    color: var(--dark-color);
+    font-size: 0.95rem;
+}
+
+/* ========== ANIMATION CONTROLS ========== */
+.etape-navigation-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--light-gray);
+}
+
+.etape-control-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.etape-control-btn:hover {
+    color: var(--primary-color);
+    background: rgba(67, 97, 238, 0.1);
+    border-color: rgba(67, 97, 238, 0.2);
+}
+
+.etape-step-indicators {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.etape-step-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--light-gray);
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.etape-step-dot.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: scale(1.3);
+    box-shadow: 0 0 15px rgba(67, 97, 238, 0.4);
+}
+
+/* ========== AUTO-PLAY INDICATOR ========== */
+.etape-auto-play-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(247, 37, 133, 0.1));
+    border-radius: 50px;
+    color: var(--dark-color);
+    font-size: 0.95rem;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.etape-auto-play-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.etape-auto-play-dot.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    animation: pulseVertical 1.5s infinite ease-in-out;
+}
+
+.etape-replay-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.etape-replay-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ========== CTA SECTION ========== */
+.cmc-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafd 0%, #f0f4ff 100%);
+}
+
+.cta-card {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 5rem 4rem;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+.cta-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-card p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 80px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    background: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.app-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.app-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.app-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #a0a0a0;
+}
+
+.eco-note {
+    margin-top: 0.5rem;
+    color: #4CAF50;
+    font-weight: 500;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes bounceDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+@keyframes bounceUp {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fillDown {
+    from { height: 0%; }
+    to { height: 100%; }
+}
+
+@keyframes fillUp {
+    from { height: 0%; }
+    to { height: 100%; }
+}
+
+@keyframes slideVertical {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseVertical {
+    0%, 100% { transform: scale(1) translateY(0); }
+    25% { transform: scale(1.2) translateY(-5px); }
+    75% { transform: scale(1.2) translateY(5px); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1200px) {
+    .etape-chauffeurs-demo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .etape-lieux-demo,
+    .etape-dates-demo,
+    .etape-confirmation-demo {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .etape-animation-container {
+        padding: 2rem;
+    }
+    
+    .etape-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .cta-card {
+        padding: 3rem 2rem;
+    }
+    
+    .cta-card h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .etape-header {
+        display: none;
+    }
+    
+    .etape-header-mobile {
+        display: block;
+    }
+    
+    .etape-sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .etape-sidebar.mobile-open {
+        transform: translateX(0);
+    }
+    
+    .etape-mobile-overlay {
+        display: block;
+    }
+    
+    .etape-main-content {
+        margin-left: 0;
+        padding: 1rem;
+        padding-top: 5rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .etape-hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .progress-track {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .step-connector {
+        display: none;
+    }
+    
+    .etape-chauffeurs-demo {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .etape-navigation-controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .etape-auto-play-indicator {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .etape-direction-indicator-hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .etape-hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .etape-hero-description {
+        font-size: 1rem;
+    }
+    
+    .etape-step-title {
+        font-size: 1.5rem;
+    }
+    
+    .etape-step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .etape-animation-container {
+        padding: 1.5rem;
+    }
+    
+    .etape-direction-line {
+        height: 50px;
+    }
+    
+    .etape-control-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .etape-step-dot {
+        width: 12px;
+        height: 12px;
+    }
+}
