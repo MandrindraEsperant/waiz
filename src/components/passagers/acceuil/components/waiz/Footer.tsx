@@ -1,4 +1,5 @@
-import { Home, User, Globe, Mail, Phone} from "lucide-react";
+import { Mail, Github, Facebook, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 
 const cols = [
   {
@@ -16,68 +17,138 @@ const cols = [
 ];
 
 export function Footer() {
-  return (
-    <footer id="footer" className="border-t border-border bg-card">
-      <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_2fr]">
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary text-lg font-bold text-primary-foreground">
-                W
-              </span>
-              <span className="text-2xl font-semibold tracking-tight">Waiz</span>
-            </div>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  };
 
-            <p className="mt-4 max-w-sm text-muted-foreground">
-              Le covoiturage malin, sécurisé et éco-responsable à Madagascar.
+  const itemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4 },
+    },
+  };
+
+  return (
+    <footer id="footer" className="border-t border-slate-200/60 bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        {/* Main Content Grid */}
+        <motion.div
+          className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_2fr]"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {/* Brand Section */}
+          <motion.div variants={itemVariants}>
+            {/* Logo */}
+            <a href="/" className="inline-flex items-center gap-3 mb-6 group">
+              <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-700 flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:shadow-lg transition-shadow">
+                W
+              </div>
+              <span className="text-2xl font-bold tracking-tight text-slate-900">Waiz</span>
+            </a>
+
+            {/* Description */}
+            <p className="text-slate-600 leading-relaxed mb-6 max-w-sm">
+              Le covoiturage malin, sécurisé et éco-responsable à Madagascar. Économisez, voyagez en confiance, réduisez votre empreinte carbone.
             </p>
 
-            <div className="mt-6 flex items-center gap-2">
-              {[Home, User, Globe, Mail, Phone].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+            {/* Social Links */}
+            <div className="flex items-center gap-3">
+              {[
+                { icon: Mail, label: "Email", href: "#" },
+                { icon: Github, label: "GitHub", href: "#" },
+                { icon: Facebook, label: "Facebook", href: "#" },
+              ].map(({ icon: Icon, label, href }) => (
+                <motion.a
+                  key={label}
+                  href={href}
+                  className="h-10 w-10 rounded-lg border border-slate-200 text-slate-600 hover:border-emerald-600 hover:text-emerald-600 hover:bg-emerald-50 transition-all flex items-center justify-center"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label={label}
                 >
-                  <Icon className="h-4 w-4" />
-                </a>
+                  <Icon className="h-4.5 w-4.5" />
+                </motion.a>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+          {/* Links Grid */}
+          <motion.div
+            className="grid grid-cols-2 gap-8 sm:grid-cols-3"
+            variants={containerVariants}
+          >
             {cols.map((c) => (
-              <div key={c.title}>
-                <h4 className="text-sm font-semibold text-foreground">
+              <motion.div key={c.title} variants={itemVariants}>
+                <h4 className="text-sm font-semibold text-slate-900 mb-4">
                   {c.title}
                 </h4>
 
-                <ul className="mt-4 space-y-3">
+                <ul className="space-y-3">
                   {c.links.map((l) => (
                     <li key={l}>
                       <a
                         href="#"
-                        className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                        className="text-sm text-slate-600 hover:text-emerald-700 transition-colors"
                       >
                         {l}
                       </a>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
+          </motion.div>
+        </motion.div>
+
+        {/* Bottom Bar */}
+        <motion.div
+          className="mt-14 pt-6 border-t border-slate-200/60"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            {/* Copyright */}
+            <p className="text-xs text-slate-500">
+              © Waiz {new Date().getFullYear()} — Tous droits réservés
+            </p>
+
+            {/* Contact Info */}
+            <div className="flex flex-col sm:flex-row gap-4 text-xs text-slate-600">
+              <a
+                href="tel:+261123456789"
+                className="inline-flex items-center gap-1.5 hover:text-emerald-700 transition-colors"
+              >
+                <Phone className="h-3.5 w-3.5" />
+                +261 (0) 123 456 789
+              </a>
+              <a
+                href="mailto:contact@waiz.mg"
+                className="inline-flex items-center gap-1.5 hover:text-emerald-700 transition-colors"
+              >
+                <Mail className="h-3.5 w-3.5" />
+                contact@waiz.mg
+              </a>
+            </div>
+
+            {/* Eco Message */}
+            <p className="text-xs text-slate-500 italic">
+              Covoiturer, c'est réduire son empreinte carbone
+            </p>
           </div>
-        </div>
-
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:flex-row">
-          <p className="text-xs text-muted-foreground">
-            © WAIZ {new Date().getFullYear()} — Tous droits réservés
-          </p>
-
-          <p className="text-xs text-muted-foreground">
-            🌿 Covoiturer, c'est réduire son empreinte carbone
-          </p>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

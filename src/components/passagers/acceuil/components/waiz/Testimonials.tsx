@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const items = [
   {
     name: "Haja R.",
     role: "Passager · Tana → Toamasina",
-    text: "J'ai économisé énormément sur mon trajet. Conducteur très sympathique et voiture propre. Je recommande vivement Waiz !",
+    text: "J'ai économisé énormément sur mon trajet. Conducteur très sympathique et voiture propre. Je recommande vivement Waiz!",
     rating: 5,
   },
   {
@@ -17,7 +18,7 @@ const items = [
   {
     name: "Lova T.",
     role: "Passagère · Mahajanga",
-    text: "Service fiable et économique. Les passagers étaient ponctuels et respectueux. Je recommande à toute ma famille !",
+    text: "Service fiable et économique. Les passagers étaient ponctuels et respectueux. Je recommande à toute ma famille!",
     rating: 5,
   },
   {
@@ -31,73 +32,126 @@ const items = [
 export function Testimonials() {
   const [i, setI] = useState(0);
   const t = items[i];
+
+  const slideVariants = {
+    enter: { opacity: 0, x: 50 },
+    center: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: -50 },
+  };
+
   return (
-    <section id="avis" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-5xl px-5 lg:px-8">
-        <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+    <section id="avis" className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-sm font-semibold uppercase tracking-wider text-emerald-600 mb-3">
             Ils nous font confiance
           </p>
-          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">
             La voix de la communauté
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="relative mt-16 rounded-3xl border border-border bg-card p-8 shadow-card lg:p-14">
-          <Quote className="absolute right-8 top-8 h-16 w-16 text-primary/10" />
+        {/* Testimonial Card */}
+        <motion.div
+          className="relative rounded-3xl border border-slate-200/60 bg-white p-8 sm:p-10 lg:p-14 shadow-lg"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+        >
+          {/* Quote Icon */}
+          <Quote className="absolute right-6 sm:right-8 top-6 sm:top-8 h-14 w-14 sm:h-16 sm:w-16 text-emerald-100" />
 
-          <div className="flex gap-1">
+          {/* Stars */}
+          <div className="flex gap-1 mb-6">
             {Array.from({ length: t.rating }).map((_, k) => (
-              <Star key={k} className="h-5 w-5 fill-accent text-accent" />
+              <Star
+                key={k}
+                className="h-5 w-5 fill-amber-400 text-amber-400"
+              />
             ))}
           </div>
 
-          <p className="mt-6 text-2xl font-medium leading-relaxed text-foreground text-balance lg:text-3xl">
-            "{t.text}"
-          </p>
+          {/* Testimonial Text */}
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={i}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="text-2xl sm:text-3xl font-semibold leading-relaxed text-slate-900 text-balance mb-8"
+            >
+              "{t.text}"
+            </motion.p>
+          </AnimatePresence>
 
-          <div className="mt-8 flex items-center justify-between gap-4">
+          {/* Author Info & Controls */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pt-6 border-t border-slate-200/60">
             <div className="flex items-center gap-4">
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-primary text-lg font-semibold text-primary-foreground">
+              <div className="h-12 w-12 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-white font-semibold text-lg">
                 {t.name[0]}
-              </span>
+              </div>
               <div>
-                <p className="font-semibold text-foreground">{t.name}</p>
-                <p className="text-sm text-muted-foreground">{t.role}</p>
+                <p className="font-semibold text-slate-900">{t.name}</p>
+                <p className="text-sm text-slate-600">{t.role}</p>
               </div>
             </div>
 
+            {/* Navigation Buttons */}
             <div className="flex items-center gap-2">
-              <button
+              <motion.button
                 onClick={() => setI((i - 1 + items.length) % items.length)}
-                className="grid h-11 w-11 place-items-center rounded-full border border-border bg-background transition-colors hover:border-primary hover:text-primary"
+                className="h-10 w-10 rounded-full border border-slate-200 bg-white text-slate-700 hover:border-emerald-600 hover:text-emerald-600 transition-all flex items-center justify-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 aria-label="Précédent"
               >
                 <ChevronLeft className="h-5 w-5" />
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 onClick={() => setI((i + 1) % items.length)}
-                className="grid h-11 w-11 place-items-center rounded-full bg-primary text-primary-foreground transition-colors hover:bg-primary/90"
+                className="h-10 w-10 rounded-full bg-emerald-700 text-white hover:bg-emerald-800 transition-all flex items-center justify-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 aria-label="Suivant"
               >
                 <ChevronRight className="h-5 w-5" />
-              </button>
+              </motion.button>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mt-6 flex justify-center gap-2">
+        {/* Dot Indicators */}
+        <motion.div
+          className="mt-8 flex justify-center gap-2"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           {items.map((_, k) => (
-            <button
+            <motion.button
               key={k}
               onClick={() => setI(k)}
-              className={`h-1.5 rounded-full transition-all ${
-                k === i ? "w-8 bg-primary" : "w-2 bg-border"
+              className={`rounded-full transition-all ${
+                k === i
+                  ? "w-8 h-2.5 bg-emerald-700"
+                  : "w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400"
               }`}
               aria-label={`Avis ${k + 1}`}
+              whileHover={{ scale: 1.1 }}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
