@@ -1,4 +1,4 @@
-import { Heart, ArrowRight, CheckCircle2, Users } from "lucide-react";
+import { Heart, ArrowRight, CheckCircle2, Users, Play } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-picture.png";
 
@@ -13,7 +13,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative w-full min-h-screen bg-emerald-50/60 pt-24 pb-16 lg:pt-32 lg:pb-24">
+    <section className="relative w-full min-h-screen bg-gradient-to-b from-emerald-50 to-emerald-50/30 pt-24 pb-16 lg:pt-32 lg:pb-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
@@ -31,7 +31,7 @@ export function Hero() {
           <motion.div className="flex flex-col justify-center" variants={itemVariants}>
             {/* Badge */}
             <motion.div
-              className="inline-flex w-fit items-center gap-2 rounded-full bg-white/50 border border-emerald-200/50 px-3.5 py-2 mb-6"
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-white/60 border border-emerald-200/50 px-3.5 py-2 mb-6 backdrop-blur-sm"
               variants={itemVariants}
             >
               <span className="inline-flex h-2 w-2 rounded-full bg-emerald-600" />
@@ -40,7 +40,7 @@ export function Hero() {
 
             {/* Main Headline */}
             <motion.h1
-              className="text-5xl sm:text-6xl lg:text-6xl font-bold leading-tight text-slate-900 mb-6"
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-slate-900 mb-6"
               variants={itemVariants}
             >
               Voyagez malin,{" "}
@@ -91,7 +91,7 @@ export function Hero() {
             >
               {/* Primary CTA - Download */}
               <motion.button
-                className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-700 text-white font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-emerald-700 text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:bg-emerald-800 transition-all duration-300"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -117,14 +117,59 @@ export function Hero() {
             className="relative h-full min-h-96 lg:min-h-[500px]"
             variants={itemVariants}
           >
-            <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-200/50">
+              {/* Hero Image */}
               <img
                 src={heroImg}
                 alt="Trajets à Madagascar avec Waiz"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+
+              {/* Play Button */}
+              <motion.button
+                className="absolute top-6 right-6 h-12 w-12 rounded-full bg-white text-slate-900 shadow-lg hover:shadow-xl transition-all flex items-center justify-center"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Play className="h-5 w-5 fill-current" />
+              </motion.button>
+
+              {/* Eco Badge */}
+              <motion.div
+                className="absolute top-6 left-6 inline-flex items-center gap-2 rounded-lg bg-white/95 backdrop-blur-sm px-3 py-2 shadow-lg border border-white/50"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+              >
+                <span className="text-sm font-semibold text-slate-900">-72%</span>
+                <span className="text-xs text-slate-600">CO₂</span>
+              </motion.div>
+
+              {/* Trip Card Overlay */}
+              <motion.div
+                className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-white/50"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+              >
+                <div className="space-y-3">
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <p className="text-xs font-medium text-slate-500 mb-1">Antananarivo</p>
+                      <p className="font-bold text-slate-900 text-sm">Antananarivo → Toamasina</p>
+                    </div>
+                    <span className="bg-emerald-700 text-white px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap ml-2">
+                      35 000 Ar
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-slate-600 pt-2 border-t border-slate-100">
+                    <span>3 places restantes</span>
+                    <span className="text-amber-500">★ 4.9</span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </motion.div>
