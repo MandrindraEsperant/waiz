@@ -8,8 +8,6 @@ import { CTA } from "./components/waiz/CTA";
 import { Footer } from "./components/waiz/Footer";
 
 export default function Acceuil() {
-  console.log("[v0] Acceuil component rendering");
-  
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
