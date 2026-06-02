@@ -1,162 +1,177 @@
-import { Apple, ArrowRight, Play, ShieldCheck, Sparkles, UserPlus } from "lucide-react";
+import { ArrowRight, CheckCircle2, Users, Play } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-picture.png";
 
 export function Hero() {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section
-      id="hero"
-      className="relative overflow-hidden bg-gradient-hero pt-32 pb-20 lg:pt-40 lg:pb-28"
-    >
-      <div className="absolute inset-0 bg-grain opacity-40 pointer-events-none" />
-
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 lg:grid-cols-2 lg:gap-16 lg:px-8">
-        {/* LEFT COLUMN — title, description, 2 CTAs */}
+    <section className="relative w-full bg-gradient-to-b from-emerald-50/60 to-white pt-24 pb-8 lg:pt-28 lg:pb-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.1, delayChildren: 0.1 },
+            },
+          }}
         >
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card/70 px-3.5 py-1.5 text-xs font-medium text-foreground backdrop-blur">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
-            </span>
-            Covoiturage nouvelle génération à Madagascar
-          </span>
-
-          <h1 className="mt-6 text-5xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl text-balance">
-            Voyagez malin,{" "}
-            <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-                économisez
-              </span>
-              <svg
-                viewBox="0 0 200 12"
-                className="absolute -bottom-2 left-0 w-full text-primary/40"
-                fill="none"
-              >
-                <path
-                  d="M2 8 Q 50 2, 100 6 T 198 4"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>{" "}
-            plus.
-          </h1>
-
-          <p className="mt-6 max-w-xl text-lg text-muted-foreground text-balance">
-            Rejoignez la communauté <strong className="text-foreground">Waiz</strong>{" "}
-            et transformez chaque trajet en aventure — sécurisé, abordable et
-            éco-responsable.
-          </p>
-
-          {/* 2 ACTION BUTTONS */}
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <button className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 text-base font-semibold text-primary-foreground shadow-elegant transition-all hover:bg-primary/90 hover:translate-y-[-1px]">
-              <Apple className="h-5 w-5" />
-              Télécharger l'app
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </button>
-            <button className="group inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-7 py-4 text-base font-semibold text-foreground shadow-soft transition-all hover:bg-muted hover:translate-y-[-1px]">
-              <UserPlus className="h-5 w-5 text-primary" />
-              S'inscrire gratuitement
-            </button>
-          </div>
-
-          {/* Trust row */}
-          <div className="mt-10 flex flex-wrap items-center gap-6">
-            <div className="flex -space-x-2">
-              {[1, 2, 3, 4].map((i) => (
-                <img
-                  key={i}
-                  src={`https://i.pravatar.cc/64?img=${i + 10}`}
-                  alt=""
-                  className="h-9 w-9 rounded-full border-2 border-background object-cover"
-                  loading="lazy"
-                />
-              ))}
-            </div>
-            <div className="text-sm">
-              <p className="font-semibold text-foreground">+12 000 voyageurs</p>
-              <p className="text-muted-foreground">
-                ★ 4.9/5 · communauté active
-              </p>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <ShieldCheck className="h-4 w-4 text-primary" />
-              Trajets vérifiés
-            </div>
-          </div>
-        </motion.div>
-
-        {/* RIGHT COLUMN — visual */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-          className="relative"
-        >
-          <div className="relative overflow-hidden rounded-[2rem] shadow-elegant ring-1 ring-border">
-            <img
-              src={heroImg}
-              alt="Route panoramique à Madagascar"
-              width={1280}
-              height={1280}
-              className="aspect-[4/5] w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-
-            {/* Floating play */}
-            <button className="absolute right-5 top-5 grid h-12 w-12 place-items-center rounded-full bg-background/90 text-foreground shadow-soft backdrop-blur transition-transform hover:scale-105">
-              <Play className="h-5 w-5 fill-current" />
-            </button>
-
-            {/* Floating trip card */}
+          {/* LEFT COLUMN - Content */}
+          <motion.div className="flex flex-col justify-center" variants={itemVariants}>
+            {/* Badge */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="absolute bottom-5 left-5 right-5 rounded-2xl border border-border bg-background/95 p-4 shadow-card backdrop-blur"
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-white/50 border border-emerald-200/50 px-3 py-1.5 mb-4 backdrop-blur-sm"
+              variants={itemVariants}
             >
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-xs font-medium text-muted-foreground">
-                    Prochain départ
-                  </p>
-                  <p className="mt-0.5 font-semibold text-foreground">
-                    Antananarivo → Toamasina
-                  </p>
+              <span className="inline-flex h-2 w-2 rounded-full bg-emerald-600" />
+              <span className="text-xs font-medium text-slate-700">Covoiturage nouvelle génération à Madagascar</span>
+            </motion.div>
+
+            {/* Main Headline */}
+            <motion.h1
+              className="text-5xl sm:text-6xl lg:text-6xl font-bold leading-tight text-slate-900 mb-5"
+              variants={itemVariants}
+            >
+              Voyagez malin,{" "}
+              <span className="text-emerald-600">économisez</span> plus.
+            </motion.h1>
+
+            {/* Description */}
+            <motion.p
+              className="text-base text-slate-600 leading-relaxed max-w-md mb-6"
+              variants={itemVariants}
+            >
+              Rejoignez la communauté <span className="font-semibold text-slate-900">Waiz</span> et transformez chaque trajet
+              en aventure — sécurisé, abordable et éco-responsable.
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6"
+              variants={itemVariants}
+            >
+              {/* Primary CTA - Download */}
+              <motion.button
+                className="group inline-flex items-center justify-center gap-2 px-5 py-3 bg-emerald-700 text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:bg-emerald-800 transition-all duration-300"
+                whileHover={{ scale: 1.02, y: -1 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z" />
+                </svg>
+                <span>Télécharger l'app</span>
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </motion.button>
+
+              {/* Secondary CTA - Sign Up */}
+              <motion.button
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white border border-slate-300 text-slate-900 font-semibold rounded-full shadow-sm hover:shadow-md hover:border-emerald-400 transition-all duration-300"
+                whileHover={{ scale: 1.02, y: -1 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Users className="h-5 w-5" />
+                <span>S'inscrire gratuitement</span>
+              </motion.button>
+            </motion.div>
+
+            {/* Social Proof - Trust metrics */}
+            <motion.div
+              className="flex items-center gap-6"
+              variants={itemVariants}
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex -space-x-2">
+                  {[1, 2, 3, 4].map((i) => (
+                    <img
+                      key={i}
+                      src={`https://i.pravatar.cc/40?img=${i + 10}`}
+                      alt={`User ${i}`}
+                      className="h-8 w-8 rounded-full border-2 border-white object-cover"
+                      loading="lazy"
+                    />
+                  ))}
                 </div>
-                <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary">
-                  35 000 Ar
-                </span>
+                <div>
+                  <p className="font-semibold text-slate-900 text-sm">+12 000 voyageurs</p>
+                  <p className="text-xs text-slate-500">4.9/5 · communauté active</p>
+                </div>
               </div>
-              <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
-                <Sparkles className="h-3.5 w-3.5 text-accent" />
-                3 places restantes · départ dans 2h
+              <div className="flex items-center gap-2 text-sm text-slate-600">
+                <CheckCircle2 className="h-4 w-4 text-emerald-600 flex-shrink-0" />
+                <span>Trajets vérifiés</span>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
 
-          {/* Floating eco badge */}
+          {/* RIGHT COLUMN - Visual */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6 }}
-            className="absolute -left-4 top-12 hidden rounded-2xl border border-border bg-background p-3 shadow-card md:block"
+            className="relative h-full min-h-96 lg:min-h-[500px]"
+            variants={itemVariants}
           >
-            <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-xl">
-                🌿
-              </span>
-              <div>
-                <p className="text-sm font-semibold text-foreground">-72%</p>
-                <p className="text-xs text-muted-foreground">CO₂ par trajet</p>
-              </div>
+            <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border-8 border-slate-900">
+              {/* Hero Image */}
+              <img
+                src={heroImg}
+                alt="Trajets à Madagascar avec Waiz"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+
+              {/* Play Button */}
+              <motion.button
+                className="absolute top-6 right-6 h-12 w-12 rounded-full bg-white text-slate-900 shadow-lg hover:shadow-xl transition-all flex items-center justify-center hover:scale-110"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Play className="h-5 w-5 fill-current" />
+              </motion.button>
+
+              {/* Eco Badge */}
+              <motion.div
+                className="absolute top-6 left-6 inline-flex items-center gap-2 rounded-xl bg-white/90 backdrop-blur-sm px-3 py-2 shadow-lg border border-white/50"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+              >
+                <span className="text-sm font-bold text-slate-900">-72%</span>
+                <span className="text-xs text-slate-600">CO₂</span>
+              </motion.div>
+
+              {/* Trip Card Overlay */}
+              <motion.div
+                className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-slate-200/50"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+              >
+                <div className="space-y-2">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-slate-500 uppercase mb-0.5">Antananarivo</p>
+                      <p className="font-bold text-slate-900 text-sm">Antananarivo → Toamasina</p>
+                    </div>
+                    <span className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-2.5 py-1 rounded-full text-xs font-bold whitespace-nowrap">
+                      35 000 Ar
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-slate-600 pt-2 border-t border-slate-200">
+                    <span>3 places restantes</span>
+                    <span className="text-amber-500">★ 4.9</span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </motion.div>
