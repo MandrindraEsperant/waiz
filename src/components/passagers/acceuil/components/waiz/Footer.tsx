@@ -1,4 +1,4 @@
-import { Mail, Github, Facebook, Phone } from "lucide-react";
+import { Mail, Heart, Share2, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
 const cols = [
@@ -66,8 +66,8 @@ export function Footer() {
             <div className="flex items-center gap-3">
               {[
                 { icon: Mail, label: "Email", href: "#" },
-                { icon: Github, label: "GitHub", href: "#" },
-                { icon: Facebook, label: "Facebook", href: "#" },
+                { icon: Heart, label: "Favorites", href: "#" },
+                { icon: Share2, label: "Share", href: "#" },
               ].map(({ icon: Icon, label, href }) => (
                 <motion.a
                   key={label}
